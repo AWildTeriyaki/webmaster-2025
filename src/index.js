@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Navbar_Local from './Navbar-Local.js'
+import Navbar_Local from './components/Navbar-Local/Navbar-Local.js'
 import reportWebVitals from './reportWebVitals.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,5 +1,5 @@
-import '../src/Navbar-Local.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './Navbar-Local.css';
+import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
