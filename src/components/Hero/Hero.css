@@ -1,0 +1,22 @@
+#jumbotron {
+    text-align: center;
+    background-color: #2A3C2C;
+    padding: 10vmin;
+}
+
+#bg-image {
+    background-image: url("https://images.pexels.com/photos/28909536/pexels-photo-28909536/free-photo-of-delicious-biryani-dish-with-fresh-herbs.jpeg");
+    background-position: center;
+    height: 100vh;
+
+}
+
+.big {
+    color: #F6E966;
+    font-family: "Raleway", serif;
+}
+
+.small {
+    padding-top: 10px;
+    color: #fffefd;
+}
