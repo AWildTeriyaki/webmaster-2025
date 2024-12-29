@@ -6,7 +6,6 @@ import heroImage from '../../assets/soup.png'
 
 function Hero(props) {
     return (
-        // experiencing some issues with large amounts of empty space while content is side by side
         <div className="container-fluid">
             <div className="row align-items-center">
                 <div className="col-md-6 d-flex justify-content-center align-items-center" id="test">
