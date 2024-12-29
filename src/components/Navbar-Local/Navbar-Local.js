@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Navbar_Local() {
     return (
-      <Navbar fixed="top" expand="md" className="bg-body-tertiary">
+      <Navbar fixed="top" expand="md" className="bg-body-tertiary" id="navbar">
       <Container>
         <Navbar.Brand href="#home">Leaf to Ladle</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
