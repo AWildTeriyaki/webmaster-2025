@@ -1,14 +1,43 @@
 #jumbotron {
     text-align: center;
     background-color: #2A3C2C;
-    padding: 10vmin;
+    padding: 50px;
 }
 
-#bg-image {
-    background-image: url("https://images.pexels.com/photos/28909536/pexels-photo-28909536/free-photo-of-delicious-biryani-dish-with-fresh-herbs.jpeg");
-    background-position: center;
-    height: 100vh;
+.row {
+    height: 50vh;
+}
 
+#img-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+}
+
+#img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#test {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+    #test {
+        padding: 0px 25px 0px 25px;
+    }
+    #img-container {
+        width: 50%;
+        height: 70vh;
+        padding: 0px 25px 0px 25px;
+    }
+
+    #img-container img {
+        padding-top: 0;
+    }
 }
 
 .big {
