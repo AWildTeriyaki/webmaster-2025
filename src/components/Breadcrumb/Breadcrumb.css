@@ -1,0 +1,52 @@
+#bar {
+    width: 100%;
+    height: 20vh;
+    margin: 0;
+    background-color: #BBADBE;
+}
+
+#text-container {
+    text-align: center;
+}
+
+#text {
+    margin: 0;
+}
+
+.btn-primary {
+    background-color: #F6E966 !important;
+    border: black solid 1px;
+    color: black;
+    animation-duration: .2s;
+    margin: 0;
+}
+
+.btn-primary:hover {
+    color: white;
+    background-color: #2A3C2C !important;
+}
+
+/* Image from hero clips into breadcrumb when the screen grows too small- Temporary solution */
+@media screen and (max-width: 411px) {
+    #bar {
+        margin-top: 400px;
+    }
+}
+
+@media screen and (max-width: 363px) {
+    #bar {
+        margin-top: 450px;
+    }
+}
+
+@media screen and (max-width: 305px) {
+    #bar {
+        margin-top: 500px;
+    }
+}
+
+@media screen and (max-width: 276px) {
+    #bar {
+        margin-top: 600px;
+    }
+}
