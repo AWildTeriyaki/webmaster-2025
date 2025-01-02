@@ -15,7 +15,7 @@ function Hero(props) {
                     </div>
                 </div>
                 <div className="col-md-6 d-flex justify-content-center align-items-center" id="img-container">
-                    <img id="image" src={ heroImage }/>
+                    <img id="image" alt="" src={ heroImage }/>
                 </div>
             </div>
         </div>

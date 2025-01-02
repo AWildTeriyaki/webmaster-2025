@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 // Components
-import Navbar_Local from './components/Navbar-Local/Navbar-Local.js'
+import NavbarLocal from './components/NavbarLocal/NavbarLocal.js'
 import Hero from './components/Hero/Hero.js'
 import Breadcrumb from './components/Breadcrumb/Breadcrumb.js'
+import Cards from './components/Cards/Cards.js'
 
 import reportWebVitals from './reportWebVitals.js';
 
@@ -13,9 +14,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <Navbar_Local />
+    <NavbarLocal />
     <Hero/>
     <Breadcrumb />
+    <Cards />
   </React.StrictMode>
 );
 

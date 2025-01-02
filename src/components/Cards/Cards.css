@@ -1,0 +1,59 @@
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.display {
+    font-family: 'Marmelad', serif;
+}
+
+.card {
+    height: 40vh;
+}
+
+.card-img {
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+}
+
+.slideshow {
+    height: 50vh;
+}
+
+#subheading {
+    font-family: 'Syne', sans-serif;
+}
+
+#outer {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#outer-row {
+    margin: 0;
+}
+
+#intro-container {
+    height: 100%;
+    padding: 2vh;
+}
+
+#content-intro {
+    height: 100%;
+
+    color: #E6DBC5;
+}
+
+#mask {
+    padding: 20px;
+
+    background-color: rgba(42,60,44,0.5);
+}
+
+#mask h1, p {
+    opacity: 1;
+}
