@@ -11,10 +11,10 @@ import Carousel from 'react-bootstrap/Carousel'
 function Cards() {
     return (
         <div className="row align-items-center" id="outer-row">
-            <div className="col-md-6 d-flex justify-content-center align-items-center h-100" id="intro-container">
+            <div className="col-md-6 d-flex justify-content-center align-items-center h-100">
                 {/* Content introduction */}
                 <div className="position-relative w-100 h-100" id="content-intro">
-                    <img alt="" src="https://images.pexels.com/photos/4113889/pexels-photo-4113889.jpeg" />
+                    <img alt="" src="https://images.pexels.com/photos/4113889/pexels-photo-4113889.jpeg" id="content-img"/>
                     <div className="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100" id="mask">
                         <div className="row w-100 h-100">
                             <div className="col">
