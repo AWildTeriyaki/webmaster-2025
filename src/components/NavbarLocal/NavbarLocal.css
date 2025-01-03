@@ -2,3 +2,9 @@
     background-color: #E6DBC5 !important;
     border-bottom: black solid 1px !important;
 }
+
+#navbar-logo {
+    object-fit: contain;
+    height: 40px !important;
+    width: 40px !important;
+}
