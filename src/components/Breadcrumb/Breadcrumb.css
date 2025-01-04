@@ -25,6 +25,12 @@
     }
 }
 
+@media screen and (min-width: 900px) {
+    #text {
+        font-size: 28px;
+    }
+}
+
 .btn-primary {
     background-color: #F6E966 !important;
     border: black solid 1px;

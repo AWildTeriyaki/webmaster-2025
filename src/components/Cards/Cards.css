@@ -25,6 +25,7 @@ img {
 
 #subheading {
     font-family: 'Syne', sans-serif;
+    font-size: 18px;
 }
 
 #outer-row {
@@ -42,6 +43,15 @@ img {
 @media screen and (min-width: 768px) {
     #content-intro {
         margin: 0;
+    }
+    #subheading {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #subheading {
+        font-size: 26px;
     }
 }
 
