@@ -27,7 +27,7 @@ function Cards() {
                     </div>
                 </div>
             </div>
-            <div className="col-md-6 d-flex justify-content-center align-items-center">
+            <div className="col-md-6 d-flex justify-content-center align-items-center" id="slideshow-col">
                 {/* Card grid */}
                 {/* NOTE: IMAGES ARE TEMPORARY*/}
                 <Carousel slide={false}>

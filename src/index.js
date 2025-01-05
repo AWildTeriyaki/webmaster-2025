@@ -7,6 +7,7 @@ import NavbarLocal from './components/NavbarLocal/NavbarLocal.js'
 import Hero from './components/Hero/Hero.js'
 import Breadcrumb from './components/Breadcrumb/Breadcrumb.js'
 import Cards from './components/Cards/Cards.js'
+import MoralAppeal from './components/MoralAppeal/MoralAppeal.js'
 
 import reportWebVitals from './reportWebVitals.js';
 
@@ -18,6 +19,7 @@ root.render(
     <Hero/>
     <Breadcrumb />
     <Cards />
+    <MoralAppeal />
   </React.StrictMode>
 );
 
