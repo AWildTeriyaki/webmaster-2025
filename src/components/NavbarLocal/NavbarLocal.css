@@ -1,10 +1,9 @@
 #navbar {
-    background-color: #E6DBC5 !important;
-    border-bottom: black solid 1px !important;
+    background-color: #508D4E !important;
 }
 
 #navbar-logo {
     object-fit: contain;
     height: 40px;
-    width: 40px;
+    width: 100px;
 }
