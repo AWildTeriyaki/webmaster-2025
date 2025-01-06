@@ -1,6 +1,8 @@
 import './Hero2.css'
 import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+import { NavLink } from 'react-router-dom';
+
 import soup from '../../assets/soup.png'
 import heroLogo from '../../assets/logo.png'
 
@@ -29,7 +31,7 @@ function Hero2() {
             <div className="position-absolute" id="carousel-text-absolute">
                 <img src={ heroLogo }/>
                 <h1 className="display-5">100% Vegetarian. 100% Farm To Table.</h1>
-                <button className="btn-primary" id="hero-btn">Make a Reservation Today</button>
+                <NavLink to='/reservations'><button className="btn-primary" id="hero-btn">Make a Reservation Today</button></NavLink>
             </div>
         </div>
     )
