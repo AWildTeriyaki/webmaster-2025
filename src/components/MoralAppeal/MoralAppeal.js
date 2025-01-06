@@ -1,4 +1,6 @@
 import './MoralAppeal.css'
+import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 function MoralAppeal() {
     return (

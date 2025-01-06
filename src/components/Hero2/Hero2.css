@@ -1,0 +1,60 @@
+#carousel {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#carousel-mask {
+    background-color: rgba(42, 60, 44, 0.0);
+    text-align: center;
+}
+
+#carousel-text-absolute {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20vh;
+    margin-right: 0;
+    text-align: center;
+
+    padding: 60px;
+}
+
+#carousel-text-absolute img {
+    width: 180px;
+    height: 180px;
+}
+
+#carousel-text-absolute h1 {
+    font-family: 'Marmelad';
+    color: white;
+    text-shadow: black 1px 0 20px;
+
+    margin-top: 30px;
+}
+
+#hero-btn {
+    border: none;
+    border-radius: 10px;
+    width: 30vw;
+    margin-top: 30px;
+
+    font-family: "Syne";
+    font-size: 2.5vw;
+}
+
+@media screen and (max-width: 600px) {
+    #hero-btn {
+        font-size: 16px;
+        width: 150px
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #hero-btn {
+        width: 250px;
+        font-size: 21px;
+        padding: 20px;
+    }
+}

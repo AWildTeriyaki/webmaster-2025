@@ -8,6 +8,10 @@ import Hero from './components/Hero/Hero.js'
 import Breadcrumb from './components/Breadcrumb/Breadcrumb.js'
 import Cards from './components/Cards/Cards.js'
 import MoralAppeal from './components/MoralAppeal/MoralAppeal.js'
+import Footer from './components/Footer/Footer.js'
+
+// replace hero with
+import Hero2 from './components/Hero2/Hero2.js'
 
 import reportWebVitals from './reportWebVitals.js';
 
@@ -16,10 +20,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <NavbarLocal />
-    <Hero/>
-    <Breadcrumb />
+    <Hero2 />
     <Cards />
     <MoralAppeal />
+    <Footer />
   </React.StrictMode>
 );
 
