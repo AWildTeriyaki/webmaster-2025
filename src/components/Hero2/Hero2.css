@@ -58,3 +58,14 @@
         padding: 20px;
     }
 }
+
+.button-navlink {
+    color: black;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    .button-navlink {
+        color: white;
+    }
+}

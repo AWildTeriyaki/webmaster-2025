@@ -24,17 +24,17 @@ function Navbar_Local() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto w-100 nav-fill">
-            <Nav.Link style={{color: "#fffefd", fontFamily: "Raleway"}}>
-              <NavLink to='/'>Home</NavLink>
+            <Nav.Link >
+              <NavLink to='/' style={{color: "#fffefd", fontFamily: "Raleway", textDecoration: "none"}}>Home</NavLink>
             </Nav.Link>
             <Nav.Link style={{color: "#fffefd", fontFamily: "Raleway"}}>
-              <NavLink to='/about'>About</NavLink>
+              <NavLink to='/about' style={{color: "#fffefd", fontFamily: "Raleway", textDecoration: "none"}}>About</NavLink>
             </Nav.Link>
             <Nav.Link style={{color: "#fffefd", fontFamily: "Raleway"}}>
-              <NavLink to='/reservations'>Reservations</NavLink>
+              <NavLink to='/reservations' style={{color: "#fffefd", fontFamily: "Raleway", textDecoration: "none"}}>Reservations</NavLink>
             </Nav.Link>
             <Nav.Link style={{color: "#fffefd", fontFamily: "Raleway"}}>
-              <NavLink to='/references'>References</NavLink>
+              <NavLink to='/references' style={{color: "#fffefd", fontFamily: "Raleway", textDecoration: "none"}}>References</NavLink>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
