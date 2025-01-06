@@ -1,5 +1,8 @@
 import './NavbarLocal.css';
 import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+import { NavLink } from 'react-router-dom';
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -21,10 +24,18 @@ function Navbar_Local() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto w-100 nav-fill">
-            <Nav.Link href="#home" style={{color: "#fffefd", fontFamily: "Raleway"}}>Home</Nav.Link>
-            <Nav.Link href="#about" style={{color: "#fffefd", fontFamily: "Raleway"}}>About Us</Nav.Link>
-            <Nav.Link href="#menu" style={{color: "#fffefd", fontFamily: "Raleway"}}>Menus</Nav.Link>
-            <Nav.Link href="#references" style={{color: "#fffefd", fontFamily: "Raleway"}}>References</Nav.Link>
+            <Nav.Link style={{color: "#fffefd", fontFamily: "Raleway"}}>
+              <NavLink to='/'>Home</NavLink>
+            </Nav.Link>
+            <Nav.Link style={{color: "#fffefd", fontFamily: "Raleway"}}>
+              <NavLink to='/about'>About</NavLink>
+            </Nav.Link>
+            <Nav.Link style={{color: "#fffefd", fontFamily: "Raleway"}}>
+              <NavLink to='/reservations'>Reservations</NavLink>
+            </Nav.Link>
+            <Nav.Link style={{color: "#fffefd", fontFamily: "Raleway"}}>
+              <NavLink to='/references'>References</NavLink>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
