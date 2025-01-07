@@ -33,17 +33,17 @@
 }
 
 .btn-primary {
-    background-color: #F6E966 !important;
-    border: black solid 1px;
-    color: black;
-    animation-duration: .2s;
+    background-color: #2A3C2C !important;
+    border: #000000 solid 1px;
+    color: white;
+    transition-duration: 0.2s;
     margin: 0;
     padding: 2vw 3vw 2vw 3vw;
     font-size: 18px;
 }
 
 .btn-primary:hover {
-    color: white;
-    background-color: #2A3C2C !important;
+    color: black;
+    background-color: #F6E966 !important;
     border: white solid 1px;
 }

@@ -7,3 +7,15 @@
     height: 40px;
     width: 100px;
 }
+
+.navbar-button {
+    background-color: #F6E966 !important;
+    color: black !important;
+
+    margin-left: 10px;
+}
+
+.navbar-button:hover {
+    background-color: #2A3C2C !important;
+    color: white !important;
+}

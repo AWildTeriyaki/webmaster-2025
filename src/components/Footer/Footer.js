@@ -7,7 +7,7 @@ function Footer() {
     return (
         <div className="footer">
             <div className="footer-bottom">
-                <img src={ logo }/>
+                <img alt="logo" src={ logo }/>
                 <p class="footer-text">Leaf To Ladle • Vegetarian Restaurant • 221B Baker Street</p>
             </div>
         </div>

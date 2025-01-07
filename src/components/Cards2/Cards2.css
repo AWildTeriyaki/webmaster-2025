@@ -1,0 +1,104 @@
+.row,
+.col {
+    padding: 0;
+    margin: 0;
+}
+
+#outer-row {
+    height: auto;
+    min-height: 100vh;
+}
+
+#outer-text-col {
+    padding: 0;
+}
+
+#mask {
+    padding: 20px;
+
+    background-color: rgba(42,60,44,0.5);
+}
+
+#mask h1, p {
+    opacity: 1;
+}
+
+#cards-image {
+    object-fit: cover;
+
+    height: 100vh;
+}
+
+.text-col {
+    color: #E6DBC5;
+}
+
+.text-col h1 {
+    font-family: 'Marmelad', serif;
+    margin-bottom: 30px;
+}
+
+.text-col p {
+    font-family: 'Syne', sans-serif;
+}
+
+.text-row {
+    display: inline-block;
+}
+
+.cards-col {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.card-col {
+    padding: 0;
+    margin: 0;
+}
+
+.card-txt {
+    font-size: 12px;
+    text-align: center;
+}
+
+.card-image {
+    object-fit: contain;
+    width: 100%;
+    height: 130px;
+}
+
+.card {
+    height: 50vh;
+    padding: 0;
+    margin: 0;
+}
+
+.card-title {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .card-text {
+        font-size: 1.5vw;
+    }
+    .card-title {
+        font-size: 2.5vw;
+    }
+    .text-col p {
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .card-text {
+        font-size: 16px;
+    }
+    .card-title {
+        font-size: 28px;
+    }
+    .card {
+        padding: 30px;
+    }
+}

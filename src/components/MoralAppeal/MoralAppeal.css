@@ -1,3 +1,9 @@
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 .moral-appeal-outer {
     height: 100vh;
 
@@ -22,8 +28,12 @@
     border-radius: 0;
 }
 
-@media screen and (min-width: 768px) {
-    .moral-appeal-outer {
-        margin-top: 10vh;
-    }
+#moral-appeal-button {
+    background-color: #F6E966 !important;
+    color: black;
+}
+
+#moral-appeal-button:hover {
+    background-color:#2A3C2C !important;
+    color: white;
 }
