@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Responsive Food Delivery Services</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="orderform.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="orderform.js"></script>
+  </head>
+  <body>
+    <!--main-->
+    <div class="main">
+      <!--main navbar-->
+      <div class="main-navbar">
+        <!--menu when appear on mobile view-->
+        <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+        <!--search bar-->
+        <div class="search">
+          <input type="text" placeholder="Hungry?" />
+          <button class="search-btn">Search</button>
+        </div>
+        <!--profile icon on left left of navbar-->
+        <div class="profile">
+          <a class="cart" href="#" onclick="toggleCartPopup()">
+            <ion-icon name="cart-outline"></ion-icon>
+            <span class="cart-count" id="cart-count">0</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Cart Popup -->
+      <div class="cart-popup" id="cart-popup">
+        <button class="cart-close" onclick="closeCart()">×</button>
+
+        <h3>Your Cart</h3>
+
+        <!-- Cart Items Table -->
+        <table id="cart-items">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Qty</th>
+              <th>Price</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Cart items will be dynamically added here -->
+          </tbody>
+        </table>
+
+        <p>Total<span id="cart-total">0.00</span></p>
+
+        <!-- Proceed to Checkout Button -->
+        <button class="checkout-btn" onclick="proceedToCheckout()">
+          Proceed to Checkout
+        </button>
+
+        <!-- Checkout Section (Hidden initially) -->
+        <div class="checkout-section">
+          <h4>Payment Details</h4>
+
+          <!-- Payment Method Selection -->
+          <div class="information">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+              required
+              pattern="^[A-Za-z\s]+$"
+              title="Name must contain only letters and spaces."
+            />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="payment">
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method">
+              <option value="credit">Credit Card</option>
+              <option value="paypal">PayPal</option>
+            </select>
+
+            <br />
+            <!-- Pickup or Delivery Selection -->
+
+            <label for="delivery-option">Choose Pickup or Delivery:</label>
+            <select
+              id="delivery-option"
+              name="delivery-option"
+              onchange="toggleAddressInput()"
+            >
+              <option value="pickup">Pickup</option>
+              <option value="delivery">Delivery</option>
+            </select>
+          </div>
+
+          <!-- Address Input (only shows if Delivery is chosen) -->
+          <div id="address-input" style="display: none">
+            <label for="delivery-address">Street Number</label>
+            <input
+              type="text"
+              id="delivery-address"
+              name="delivery-address"
+              required
+            />
+            <label for="delivery-address">Street Name</label>
+            <input
+              type="text"
+              id="delivery-address"
+              name="delivery-address"
+              required
+            />
+            <label for="delivery-address">Unit Number (if applicable)</label>
+            <input type="text" id="delivery-address" name="delivery-address" />
+            <label for="delivery-address">City</label>
+            <input
+              type="text"
+              id="delivery-address"
+              name="delivery-address"
+              required
+            />
+            <label for="delivery-address">State</label>
+            <input
+              type="text"
+              id="delivery-address"
+              name="delivery-address"
+              required
+            />
+            <label for="delivery-address">Zipcode</label>
+            <input
+              type="number"
+              id="delivery-address"
+              name="delivery-address"
+              required
+            />
+          </div>
+
+          <!-- Credit Card Details Form -->
+          <div id="credit-card-details" class="payment-details">
+            <label for="card-number">Card Number:</label>
+            <input
+              type="text"
+              id="card-number"
+              name="card-number"
+              placeholder="Enter card number"
+            />
+
+            <label for="card-expiry">Expiration Date:</label>
+            <input
+              type="text"
+              id="card-expiry"
+              name="card-expiry"
+              placeholder="MM/YY"
+            />
+
+            <label for="card-cvc">CVC:</label>
+            <input
+              type="text"
+              id="card-cvc"
+              name="card-cvc"
+              placeholder="Enter CVC"
+            />
+          </div>
+
+          <!-- PayPal Details Form -->
+          <div
+            id="paypal-details"
+            class="payment-details"
+            style="display: none"
+          >
+            <label for="paypal-email">PayPal Email:</label>
+            <input
+              type="email"
+              id="paypal-email"
+              name="paypal-email"
+              placeholder="Enter PayPal email"
+            />
+          </div>
+
+          <!-- Confirm Payment Button -->
+          <button class="confirm-btn" onclick="confirmPayment()">
+            Confirm Payment
+          </button>
+        </div>
+      </div>
+
+      <!--main highlight-->
+      <div class="main-highlight">
+        <!--title section and arrow-->
+        <div class="main-header">
+          <h2 class="main-title">Recommendations</h2>
+          <div class="main-arrow">
+            <ion-icon
+              class="back"
+              name="chevron-back-circle-outline"
+            ></ion-icon>
+            <ion-icon
+              class="next"
+              name="chevron-forward-circle-outline"
+            ></ion-icon>
+          </div>
+        </div>
+        <!--highlight menu-->
+        <div class="highlight-wrapper">
+          <div class="highlight-card">
+            <img
+              class="highlight-img"
+              src="https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/04/Cobb-Salad-main.jpg"
+            />
+            <div class="highlight-desc">
+              <h4>Fresh Salad</h4>
+              <p>$8.50</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <img
+              class="highlight-img"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1xeSaeddFkC5aHonsvR5J0YYb2RIRSDSPSg&s"
+            />
+            <div class="highlight-desc">
+              <h4>Cappuccino</h4>
+              <p>$1.50</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <img
+              class="highlight-img"
+              src="https://wp-cdn.typhur.com/wp-content/uploads/2024/06/homemade-hamburgers.webp"
+            />
+            <div class="highlight-desc">
+              <h4>Hamburger</h4>
+              <p>$2.50</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <img
+              class="highlight-img"
+              src="https://atsloanestable.com/wp-content/uploads/2023/06/new-york-style-pizza2-500x500.jpg"
+            />
+            <div class="highlight-desc">
+              <h4>Pizza</h4>
+              <p>$1.75</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--main menu-->
+      <div class="main-menus">
+        <!--filter section-->
+        <div class="main-filter">
+          <div>
+            <h2 class="main-title">
+              Menu<br />
+              Category
+            </h2>
+            <div class="main-arrow">
+              <ion-icon
+                class="back-menus"
+                name="chevron-back-circle-outline"
+              ></ion-icon>
+              <ion-icon
+                class="next-menus"
+                name="chevron-forward-circle-outline"
+              ></ion-icon>
+            </div>
+          </div>
+          <div class="filter-wrapper">
+            <div class="filter-card" data-category="all">
+              <div class="filter-icon">
+                <ion-icon name="reader-outline"></ion-icon>
+              </div>
+              <p>All Menus</p>
+            </div>
+            <div class="filter-card" data-category="appetizer">
+              <div class="filter-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="33"
+                  stroke-width="1.4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-bread"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M18 4a3 3 0 0 1 2 5.235v8.765a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-8.764a3 3 0 0 1 1.824 -5.231h12.176v-.005z"
+                  />
+                </svg>
+              </div>
+              <p>Appetizers</p>
+            </div>
+            <div class="filter-card" data-category="entree">
+              <div class="filter-icon">
+                <ion-icon name="restaurant-outline"></ion-icon>
+              </div>
+              <p>Entrees</p>
+            </div>
+            <div class="filter-card" data-category="side">
+              <div class="filter-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="33"
+                  stroke-width="1.4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-salad"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M4 11h16a1 1 0 0 1 1 1v.5c0 1.5 -2.517 5.573 -4 6.5v1a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-1c-1.687 -1.054 -4 -5 -4 -6.5v-.5a1 1 0 0 1 1 -1z"
+                  />
+                  <path
+                    d="M18.5 11c.351 -1.017 .426 -2.236 .5 -3.714v-1.286h-2.256c-2.83 0 -4.616 .804 -5.64 2.076"
+                  />
+                  <path
+                    d="M5.255 11.008a12.204 12.204 0 0 1 -.255 -2.008v-1h1.755c.98 0 1.801 .124 2.479 .35"
+                  />
+                  <path d="M8 8l1 -4l4 2.5" />
+                  <path d="M13 11v-.5a2.5 2.5 0 1 0 -5 0v.5" />
+                </svg>
+              </div>
+              <p>Sides</p>
+            </div>
+            <div class="filter-card" data-category="drink">
+              <div class="filter-icon">
+                <ion-icon name="pint-outline"></ion-icon>
+              </div>
+              <p>Beverages</p>
+            </div>
+            <div class="filter-card" data-category="dessert">
+              <div class="filter-icon">
+                <ion-icon name="ice-cream-outline"></ion-icon>
+              </div>
+              <p>Desserts</p>
+            </div>
+          </div>
+        </div>
+        <hr class="divider" />
+        <!--list of food-->
+        <div class="main-detail">
+          <h2 class="main-title">Choose Order</h2>
+          <div class="detail-wrapper">
+            <div class="detail-card" data-category="appetizer">
+              <img
+                class="detail-img"
+                src="https://feelgoodfoodie.net/wp-content/uploads/2023/09/Roasted-Butternut-Squash-Soup-TIMG.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Roasted Winter Squash Soup</h4>
+                  <p class="detail-sub">
+                    Creamy butternut squash blended with roasted garlic, sage,
+                    and a drizzle of hazelnut oil
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Roasted Winter Squash Soup', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="appetizer">
+              <img
+                class="detail-img"
+                src="https://www.perrysplate.com/wp-content/uploads/2013/01/5730-480x360.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Brussel Sprout Fritters</h4>
+                  <p class="detail-sub">
+                    Crispy Brussels sprout and sweet potato fritters served with
+                    a tangy cranberry aioli
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Brussel Sprout Fritters', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="appetizer">
+              <img
+                class="detail-img"
+                src="https://www.seriouseats.com/thmb/eJ1OGisSnbjfrUyTaEq9vnYNMrU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__12__20120202-beet-grapefruit-orange-pinenut-salad-kenji-7e45a019e85d4c1c930f0f2ced791767.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Warm Beet and Citrus Salad</h4>
+                  <p class="detail-sub">
+                    Roasted beets, blood oranges, and arugula with toasted
+                    walnuts, goat cheese, and a balsamic reduction
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Warm Beet and Citrus Salad', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="appetizer">
+              <img
+                class="detail-img"
+                src="https://www.twospoons.ca/wp-content/uploads/2021/01/vegan-buffalo-cauliflower-wings-plant-based-recipe-twospoons-2.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Cauliflower Wings</h4>
+                  <p class="detail-sub">
+                    Roasted cauliflower tossed in a smoky barbecue glaze, served
+                    with a cool vegan ranch dipping sauce
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Cauliflower Wings', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="appetizer">
+              <img
+                class="detail-img"
+                src="https://www.garlicandzest.com/wp-content/uploads/2015/09/wild-mushroom-and-leek-crostata-22.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Mushroom and Leek Crostini</h4>
+                  <p class="detail-sub">
+                    Toasted sourdough topped with caramelized leeks, roasted
+                    mushroom, and a dollop of cashew cream
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Parsnip and Leek Crostini', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-card" data-category="entree">
+              <img
+                class="detail-img"
+                src="https://cdn.loveandlemons.com/wp-content/uploads/2023/01/mushroom-risotto.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Wild Mushroom Risotto</h4>
+                  <p class="detail-sub">
+                    Arborio rice cooked with local wild mushrooms, thyme, and
+                    white wine, finished with Parmesan (vegan option available)
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Parsnip and Leek Crostini', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="entree">
+              <img
+                class="detail-img"
+                src="https://playswellwithbutter.com/wp-content/uploads/2020/09/Autumn-Grain-Bowls-3-e1602169566610.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Winter Harvest Grain Bowl</h4>
+                  <p class="detail-sub">
+                    A warm mix of quinoa, roasted carrots, parsnips, and kale,
+                    topped with spiced pecans and a maple tahini dressing
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Parsnip and Leek Crostini', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="entree">
+              <img
+                class="detail-img"
+                src="https://elavegan.com/wp-content/uploads/2021/12/a-piece-of-vegan-Shepherds-pie-on-a-small-plate.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Root Vegetable Shepherd’s Pie</h4>
+                  <p class="detail-sub">
+                    Layers of lentils, caramelized onions, and roasted root
+                    vegetables topped with whipped rosemary mashed potatoes
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Root Vegetable Shepherd’s Pie', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="entree">
+              <img
+                class="detail-img"
+                src="https://lemonsandzest.com/wp-content/uploads/2020/09/Pesto-Spaghetti-Squash-3.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Spaghetti Squash with Pesto</h4>
+                  <p class="detail-sub">
+                    Roasted spaghetti squash tossed in a house-made walnut
+                    pesto, served with sautéed broccolini and cherry tomatoes
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Spaghetti Squash with Pesto', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="entree">
+              <img
+                class="detail-img"
+                src="https://prepareandnourish.com/wp-content/uploads/2022/06/classic-russian-cabbage-rolls.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Stuffed Cabbage Roll</h4>
+                  <p class="detail-sub">
+                    Tender cabbage leaves filled with quinoa, chickpeas, and
+                    root vegetables, baked in a tomato herb sauce
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Stuffed Cabbage Roll', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="entree">
+              <img
+                class="detail-img"
+                src="https://www.pro-activ.com/en-gb/-/media/Project/Upfield/Brands/ProActiv/ProActiv-Live-UK/Assets/Recipes/d9768ba2-37a7-47d2-a4ff-4b631a206f59.jpg?rev=a55b4e01049f4093bc4094660d629d39"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Winter Vegetable Lasagna</h4>
+                  <p class="detail-sub">
+                    Layers of spinach, roasted squash, caramelized onions, and
+                    ricotta (vegan option available) with a rich tomato sauce
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Winter Vegetable Lasagna', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="side">
+              <img
+                class="detail-img"
+                src="https://www.walderwellness.com/wp-content/uploads/2022/11/Maple-Roasted-Delicata-Squash-Walder-Wellness-10.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Maple-Glazed Delicata Squash</h4>
+                  <p class="detail-sub">
+                    Oven-roasted delicata squash with a maple glaze and toasted
+                    pumpkin seeds
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Maple-Glazed Delicata Squash', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="side">
+              <img
+                class="detail-img"
+                src="https://images.squarespace-cdn.com/content/v1/5a2d657ff9a61e47e04e9dc5/90a23f8b-ab4e-4d2d-9dd1-a5893c84cf95/DSC02475pslogo.jpg?format=2500w"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Charred Cabbage Wedges</h4>
+                  <p class="detail-sub">
+                    Grilled cabbage with miso butter and a sprinkle of crispy
+                    shallots
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Charred Cabbage Wedges', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="side">
+              <img
+                class="detail-img"
+                src="https://www.bakerita.com/wp-content/uploads/2020/11/Brussels-Sprouts-Sq.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Caramelized Brussels Sprouts</h4>
+                  <p class="detail-sub">
+                    Pan-seared Brussels sprouts with a balsamic glaze and a
+                    sprinkle of pomegranate seeds
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Caramelized Brussels Sprouts', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="side">
+              <img
+                class="detail-img"
+                src="https://www.jocooks.com/wp-content/uploads/2019/05/roasted-fingerling-potatoes-1-10.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Roasted Fingerling Potatoes</h4>
+                  <p class="detail-sub">
+                    Crispy roasted fingerling potatoes seasoned with fresh sage
+                    and garlic
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Roasted Fingerling Potatoes', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="side">
+              <img
+                class="detail-img"
+                src="https://nikkivegan.com/wp-content/uploads/2021/07/img_5747.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Creamy Polenta with Truffle Oil</h4>
+                  <p class="detail-sub">
+                    Velvety polenta finished with a drizzle of truffle oil and
+                    shaved Parmesan
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Creamy Polenta with Truffle Oil', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="dessert">
+              <img
+                class="detail-img"
+                src="https://sallysbakingaddiction.com/wp-content/uploads/2024/11/apple-cranberry-crumble-pie-2.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Apple-Cranberry Crumble</h4>
+                  <p class="detail-sub">
+                    Baked local apples and cranberries with an oat-almond
+                    topping, served warm with vanilla bean ice cream
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Apple-Cranberry Crumble', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="dessert">
+              <img
+                class="detail-img"
+                src="https://chocolatecoveredkatie.com/wp-content/uploads/2015/10/Avocado-Chocolate-Mousse-Recipe.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Chocolate Avocado Mousse</h4>
+                  <p class="detail-sub">
+                    Silky smooth dark chocolate mousse made with avocados,
+                    garnished with fresh raspberries and a hint of sea salt
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Chocolate Avocado Mousse', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="dessert">
+              <img
+                class="detail-img"
+                src="https://cdn.shopify.com/s/files/1/0360/3070/9900/t/3/assets/ff91afc08039--American-Spoon-Food-216.jpg?v=1635171809"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Spiced Pear Galette</h4>
+                  <p class="detail-sub">
+                    A rustic pear tart with cardamom and cinnamon, served with a
+                    dollop of whipped coconut cream
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Spiced Pear Galette', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="dessert">
+              <img
+                class="detail-img"
+                src="https://www.mybakingaddiction.com/wp-content/uploads/2012/11/plated-slice-pumpkin-cheesecake.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Pumpkin Cheesecake</h4>
+                  <p class="detail-sub">
+                    A creamy pumpkin cheesecake with a gingersnap crust and a
+                    drizzle of salted caramel
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Pumpkin Cheesecake', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="dessert">
+              <img
+                class="detail-img"
+                src="https://thebigmansworld.com/wp-content/uploads/2024/09/sticky-date-pudding-recipe.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Sticky Toffee Pudding</h4>
+                  <p class="detail-sub">
+                    A rich, date-filled cake served with a warm toffee sauce and
+                    a scoop of vegan vanilla ice cream
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Sticky Toffee Pudding', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="drink">
+              <img
+                class="detail-img"
+                src="https://www.foodnetwork.com/content/dam/images/food/fullset/2014/6/5/1/IGSP01_Hot-Mulled-Cider_s4x3.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Hot Mulled Cider</h4>
+                  <p class="detail-sub">
+                    Local apple cider infused with cinnamon, cloves, and star
+                    anise
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Hot Mulled Cider', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="drink">
+              <img
+                class="detail-img"
+                src="https://plantbasedrdblog.com/wp-content/uploads/2022/04/vegan-golden-turmeric-latte_1.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Golden Milk Latte</h4>
+                  <p class="detail-sub">
+                    A cozy blend of turmeric, ginger, and steamed oat milk,
+                    lightly sweetened with honey or agave
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Golden Milk Latte', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="drink">
+              <img
+                class="detail-img"
+                src="https://wilfa.com/cdn/shop/articles/kakao_oppskrift_tumbnail-pic.jpg?v=1709643444&width=350"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Chai-Spiced Hot Chocolate</h4>
+                  <p class="detail-sub">
+                    Rich dark chocolate blended with oat milk and chai spices,
+                    topped with a dollop of whipped cream
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Golden Milk Latte', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="drink">
+              <img
+                class="detail-img"
+                src="https://thecuriousplate.com/wp-content/uploads/2017/11/Ginger-Pomegranate-Paloma-www.climbinggriermountain.com-2.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Pomegranate Ginger Mocktail</h4>
+                  <p class="detail-sub">
+                    Fresh pomegranate juice, muddled ginger, and sparkling water
+                    with a sugared rim
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Pomegranate Ginger Mocktail', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="detail-card" data-category="drink">
+              <img
+                class="detail-img"
+                src="https://www.figjar.com/wp-content/uploads/2024/07/matcha-vanilla-latte.jpg"
+              />
+              <div class="detail-desc">
+                <div class="detail-name">
+                  <h4>Vanilla Bean Matcha Latte</h4>
+                  <p class="detail-sub">
+                    Earthy matcha green tea paired with steamed almond milk and
+                    a hint of vanilla
+                  </p>
+                  <p class="price">$10.50</p>
+                  <button
+                    class="add-to-cart-btn"
+                    onclick="addToCart('Vanilla Bean Matcha Latte', 10.50)"
+                  >
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <!--adding javascript-->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="orderform.js"></script>
+</html>
