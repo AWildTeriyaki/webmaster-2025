@@ -1,0 +1,16 @@
+.menu {
+    padding-top: 65px;
+}
+.col {
+    height: 50vh;
+}
+#spring {
+    border-bottom: black solid 1.5px;
+    border-right: black solid 1.5px;
+}
+#summer {
+    border-bottom: black solid 1.5px;
+}
+#autumn {
+    border-right: black solid 1.5px;
+}
