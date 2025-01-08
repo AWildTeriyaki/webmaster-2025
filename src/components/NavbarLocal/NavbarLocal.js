@@ -36,25 +36,30 @@ function Navbar_Local() {
     <Navbar fixed="top" expand="sm" data-bs-theme="dark" className="bg-body-tertiary" id="navbar">
       <Container>
         <Navbar.Brand href="#home" onClick={handleLogoClick}>
-          <img
-            alt="Leaf to Ladle"
-            src={logo}
-            className="d-inline-block align-top"
-            id="navbar-logo"
-          />
+          <NavLink to='/'>
+            <img
+              alt="Leaf to Ladle"
+              src={logo}
+              className="d-inline-block align-top"
+              id="navbar-logo"
+            />
+          </NavLink>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className="ms-auto"
           onClick={handleNavbarCollapse}  // Track when the navbar is toggled
         />
-        <Navbar.Collapse 
-          id="basic-navbar-nav" 
+        <Navbar.Collapse
+          id="basic-navbar-nav"
           onTransitionEnd={handleTransitionEnd} // Detect when the collapse transition ends
         >
           <Nav className="me-auto w-100 nav-fill">
             <Nav.Link>
               <NavLink to="/" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>Home</NavLink>
+            </Nav.Link>
+            <Nav.Link>
+              <NavLink to="/menu" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>Menu</NavLink>
             </Nav.Link>
             <Nav.Link style={{ color: "#fffefd", fontFamily: "Raleway" }}>
               <NavLink to="/about" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>About</NavLink>
