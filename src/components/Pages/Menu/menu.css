@@ -3,6 +3,12 @@
 }
 .col {
     height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col a {
+    text-decoration: none;
 }
 #spring {
     border-bottom: black solid 1.5px;
