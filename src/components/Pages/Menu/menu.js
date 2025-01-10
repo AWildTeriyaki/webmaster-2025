@@ -28,7 +28,7 @@ const Menu = () => (
                 </div>
             </div>
             <div className="col position-relative" id="winter">
-                <img src="https://images.pexels.com/photos/688660/pexels-photo-688660.jpeg" alt="winter" />
+                <img src="https://images.pexels.com/photos/259698/pexels-photo-259698.jpeg" alt="winter" />
                 <div className="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100" id="mask">
                     <a href={winter_menu} target="_blank" rel="noreferrer"><h1>Winter</h1></a>
                 </div>
