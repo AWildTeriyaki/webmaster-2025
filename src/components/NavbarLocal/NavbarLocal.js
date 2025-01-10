@@ -60,14 +60,12 @@ function Navbar_Local() {
             <Nav.Link>
               <NavLink to="/menu" style={{ color: "#fffefd", fontFamily: "Marmelad", textDecoration: "none" }}>Menu</NavLink>
             </Nav.Link>
-            <Nav.Link style={{ color: "#fffefd", fontFamily: "Marmelad" }}>
-              <NavLink to="/about" style={{ color: "#fffefd", fontFamily: "Marmelad", textDecoration: "none" }}>About</NavLink>
+            <Nav.Link>
+              <NavLink to="/about" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>About</NavLink>
             </Nav.Link>
-            <Nav.Link style={{ color: "#fffefd", fontFamily: "Marmelad" }}>
-              <NavLink to="/reservations" style={{ color: "#fffefd", fontFamily: "Marmelad", textDecoration: "none" }}>Reservations</NavLink>
-            </Nav.Link>
-            <Nav.Link style={{ color: "#fffefd", fontFamily: "Marmelad" }}>
-              <NavLink to="/references" style={{ color: "#fffefd", fontFamily: "Marmelad", textDecoration: "none" }}>References</NavLink>
+            <Nav.Link style={{ color: "#fffefd", fontFamily: "Raleway"}}>
+              <NavLink to="/references" target="_blank" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>References</NavLink>
+
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

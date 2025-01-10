@@ -17,8 +17,8 @@
     background-color: rgba(0, 0, 0, 0.3);
 }
 #spring {
-    border-bottom: black solid 1.5px;
-    border-right: black solid 1.5px;
+    border-bottom: white solid 1.5px;
+    border-right: white solid 1.5px;
 }
 #spring a {
     color: #FFCFCF;
@@ -27,7 +27,7 @@
     text-shadow: #F72C5B 1px 0 20px;
 }
 #summer {
-    border-bottom: black solid 1.5px;
+    border-bottom: white solid 1.5px;
 }
 #summer a {
     color: #FADA7A;
@@ -36,11 +36,17 @@
     text-shadow: #FADA7A 1px 0 20px;
 }
 #autumn {
-    border-right: black solid 1.5px;
+    border-right: white solid 1.5px;
 }
 #autumn a {
-    color: #FFDBB5;
+    color: #ECDFCC;
 }
 #autumn a:hover {
     text-shadow: #FFF8E8 1px 0 20px;
+}
+#winter a {
+    color: white;
+}
+#winter a:hover {
+    text-shadow: #79D7BE 1px 0 20px;
 }
