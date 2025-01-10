@@ -11,19 +11,18 @@ import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../assets/transparent_logo.png'
 
 function Navbar_Local() {
-  const [buttonVisible, setButtonVisible] = useState(true);  // State to track visibility of the button
-  const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(true);  // State to track collapse state
-
+  const [buttonVisible, setButtonVisible] = useState(true); 
+  const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(true);  
   const handleLogoClick = () => {
-    setButtonVisible(!buttonVisible);  // Toggle the visibility of the button when the logo is clicked
+    setButtonVisible(!buttonVisible); 
   };
 
   const handleNavbarCollapse = () => {
-    setIsNavbarCollapsed(prevState => !prevState);  // Toggle the collapse state
+    setIsNavbarCollapsed(prevState => !prevState); 
   };
 
   const handleTransitionEnd = () => {
-    // Hide the button only after the collapse transition ends and the navbar is collapsed
+    
     if (!isNavbarCollapsed) {
       setButtonVisible(false);
     }
@@ -48,32 +47,31 @@ function Navbar_Local() {
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className="ms-auto"
-          onClick={handleNavbarCollapse}  // Track when the navbar is toggled
+          onClick={handleNavbarCollapse}  
         />
         <Navbar.Collapse
           id="basic-navbar-nav"
-          onTransitionEnd={handleTransitionEnd} // Detect when the collapse transition ends
+          onTransitionEnd={handleTransitionEnd} 
         >
           <Nav className="me-auto w-100 nav-fill">
             <Nav.Link>
-              <NavLink to="/" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>Home</NavLink>
+              <NavLink to="/" style={{ color: "#fffefd", fontFamily: "Marmelad", textDecoration: "none" }}>Home</NavLink>
             </Nav.Link>
             <Nav.Link>
-              <NavLink to="/menu" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>Menu</NavLink>
+              <NavLink to="/menu" style={{ color: "#fffefd", fontFamily: "Marmelad", textDecoration: "none" }}>Menu</NavLink>
             </Nav.Link>
-            <Nav.Link style={{ color: "#fffefd", fontFamily: "Raleway" }}>
-              <NavLink to="/about" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>About</NavLink>
+            <Nav.Link style={{ color: "#fffefd", fontFamily: "Marmelad" }}>
+              <NavLink to="/about" style={{ color: "#fffefd", fontFamily: "Marmelad", textDecoration: "none" }}>About</NavLink>
             </Nav.Link>
-            <Nav.Link style={{ color: "#fffefd", fontFamily: "Raleway" }}>
-              <NavLink to="/reservations" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>Reservations</NavLink>
+            <Nav.Link style={{ color: "#fffefd", fontFamily: "Marmelad" }}>
+              <NavLink to="/reservations" style={{ color: "#fffefd", fontFamily: "Marmelad", textDecoration: "none" }}>Reservations</NavLink>
             </Nav.Link>
-            <Nav.Link style={{ color: "#fffefd", fontFamily: "Raleway" }}>
-              <NavLink to="/references" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>References</NavLink>
+            <Nav.Link style={{ color: "#fffefd", fontFamily: "Marmelad" }}>
+              <NavLink to="/references" style={{ color: "#fffefd", fontFamily: "Marmelad", textDecoration: "none" }}>References</NavLink>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
 
-        {/* Conditionally render the button based on the navbar collapse state */}
         {buttonVisible && isNavbarCollapsed && (
           <NavLink to="/orderform.html" target="_blank" rel="noopener noreferrer">
             <button className="btn navbar-button">Order Online</button>
