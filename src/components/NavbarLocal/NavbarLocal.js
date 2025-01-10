@@ -75,7 +75,7 @@ function Navbar_Local() {
 
         {/* Conditionally render the button based on the navbar collapse state */}
         {buttonVisible && isNavbarCollapsed && (
-          <NavLink to="/order">
+          <NavLink to="/orderform.html" target="_blank" rel="noopener noreferrer">
             <button className="btn navbar-button">Order Online</button>
           </NavLink>
         )}

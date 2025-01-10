@@ -9,17 +9,29 @@ import winter_menu from '../../../assets/menus/winter_menu.pdf';
 const Menu = () => (
     <div className="menu">
         <div className="row row-cols-2">
-            <div className="col" id="spring">
-                <a href={spring_menu} target="_blank" rel="noreferrer"><h1>Spring</h1></a>
+            <div className="col position-relative" id="spring">
+                <img src="https://images.pexels.com/photos/93588/pexels-photo-93588.jpeg" alt="spring" />
+                <div className="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100" id="mask">
+                    <a href={spring_menu} target="_blank" rel="noreferrer"><h1>Spring</h1></a>
+                </div>
             </div>
-            <div className="col" id="summer">
-                <a href={summer_menu} target="_blank" rel="noreferrer"><h1>Summer</h1></a>
+            <div className="col position-relative" id="summer">
+                <img src="https://images.pexels.com/photos/1862695/pexels-photo-1862695.jpeg" alt="summer" />
+                <div className="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100" id="mask">
+                    <a href={summer_menu} target="_blank" rel="noreferrer"><h1>Summer</h1></a>
+                </div>
             </div>
-            <div className="col" id="autumn">
-                <a href={autumn_menu} target="_blank" rel="noreferrer"><h1>Autumn</h1></a>
+            <div className="col position-relative" id="autumn">
+                <img src="https://images.pexels.com/photos/5540161/pexels-photo-5540161.jpeg" alt="autumn" />
+                <div className="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100" id="mask">
+                    <a href={autumn_menu} target="_blank" rel="noreferrer"><h1>Autumn</h1></a>
+                </div>
             </div>
-            <div className="col" id="winter">
-                <a href={winter_menu} target="_blank" rel="noreferrer"><h1>Winter</h1></a>
+            <div className="col position-relative" id="winter">
+                <img src="https://images.pexels.com/photos/688660/pexels-photo-688660.jpeg" alt="winter" />
+                <div className="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100" id="mask">
+                    <a href={winter_menu} target="_blank" rel="noreferrer"><h1>Winter</h1></a>
+                </div>
             </div>
         </div>
     </div>
