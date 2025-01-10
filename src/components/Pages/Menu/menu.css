@@ -9,10 +9,19 @@
 }
 .col a {
     text-decoration: none;
+    font-family: 'Lavishly Yours', serif;
+    transition-duration: 0.2s;
+
 }
 #spring {
     border-bottom: black solid 1.5px;
     border-right: black solid 1.5px;
+}
+#spring a {
+    color: #3E7B27;
+}
+#spring a:hover {
+    text-shadow: #F72C5B 1px 0 20px;
 }
 #summer {
     border-bottom: black solid 1.5px;

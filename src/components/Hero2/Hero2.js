@@ -10,7 +10,7 @@ import Carousel from 'react-bootstrap/Carousel'
 function Hero2() {
     return (
         <div>
-            <Carousel id="carousel" interval={null}>
+            <Carousel id="carousel" interval={3000}>
                 <Carousel.Item className="position-relative">
                     <img alt="" src="https://images.pexels.com/photos/8743915/pexels-photo-8743915.jpeg" style={{ height: "100vh", objectFit: "cover", borderRadius: 0 }} />
                     <div className="position-absolute top-0 left-0 d-flex justify-content-center align-items-center text-align-center w-100 h-100" id="carousel-mask">
