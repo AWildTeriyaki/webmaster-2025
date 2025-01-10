@@ -1,0 +1,169 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6dbc5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.reservation-container {
+  background: #f5f1e9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #508d4e;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e692e;
+}
+
+#response-message {
+  margin-top: 20px;
+  text-align: center;
+  color: #28a745;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .reservation-container {
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 20px;
+  }
+
+  button {
+      font-size: 14px;
+  }
+}
+/* General form styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6dbc5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.reservation-container {
+  background: #f5f1e9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px; 
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f1efea;
+  background-size: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #508d4e;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e692e;
+}
+
+#response-message {
+  margin-top: 20px;
+  text-align: center;
+  color: #508d4e;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .reservation-container {
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 20px;
+  }
+
+  button {
+      font-size: 14px;
+  }
+}
