@@ -65,7 +65,7 @@ function Navbar_Local() {
               <NavLink to="/about" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>About</NavLink>
             </Nav.Link>
             <Nav.Link style={{ color: "#fffefd", fontFamily: "Raleway"}}>
-              <NavLink to="/references"  style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>References</NavLink>
+              <NavLink to="/references"  style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>References Page</NavLink>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
