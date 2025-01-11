@@ -1,6 +1,42 @@
 .menu {
     padding-top: 65px;
 }
+.divider {
+    color: white;
+}
+.intro {
+    height: 50vh;
+    padding: 20px;
+}
+#menu-jumbotron {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2A3C2C;
+}
+.menu-text {
+    color: #E6DBC5;
+}
+.menu-row {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+.menu-col {
+    height: 12vh !important;
+    text-align: center;
+}
+.menu-lead {
+    font-size: 16px;
+    margin-bottom: 50px;
+    font-family: 'Syne';
+}
+#top-lead {
+    margin-top: 20px;
+    font-size: 14px;
+}
 .col {
     height: 50vh;
     display: flex;
@@ -49,4 +85,30 @@
 }
 #winter a:hover {
     text-shadow: #79D7BE 1px 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .menu-lead {
+        font-size: 2vw;
+    }
+    #top-lead {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .menu-lead {
+        font-size: 21px;
+    }
+    #top-lead {
+        font-size: 21px;
+    }
+    .menu-row {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .intro {
+        padding: 50px;
+        height: 60vh;
+    }
 }

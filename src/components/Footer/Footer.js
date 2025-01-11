@@ -8,7 +8,7 @@ function Footer() {
         <div className="footer">
             <div className="footer-bottom">
                 <img alt="logo" src={ logo }/>
-                <p class="footer-text">Leaf To Ladle • Vegetarian Restaurant • 221 Market Street, Philadelphia PA 19103</p>
+                <p class="footer-text">Leaf To Ladle • Vegetarian Restaurant • 221 Baker Street, Philadelphia PA 19103</p>
                 
                 <p class="footer-text contact">info@leaftoladle.com</p>
                 

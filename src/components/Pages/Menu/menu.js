@@ -8,6 +8,22 @@ import winter_menu from '../../../assets/menus/winter_menu.pdf';
 
 const Menu = () => (
     <div className="menu">
+        <div className="intro">
+            <div className="jumbotron" id="menu-jumbotron">
+                <div className="row row-cols-1 menu-row">
+                    <div className="col menu-col">
+                        <h1 className="display menu-text menu-display">Menu</h1>
+                    </div>
+                    <div className="col menu-col">
+                        <p className="lead menu-text menu-lead" id="top-lead">We rotate our menus to fit the plants that are available every season and ensure you always have the freshest and most delicious fruits and vegetables possible on your plate.</p>
+                    </div>
+                    <hr className="my-4 divider"/>
+                    <div className="col menu-col">
+                        <p className="lead menu-text menu-lead" id="bottom-lead">Click on a season name to see the menu!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div className="row row-cols-2">
             <div className="col position-relative" id="spring">
                 <img src="https://images.pexels.com/photos/93588/pexels-photo-93588.jpeg" alt="spring" />
