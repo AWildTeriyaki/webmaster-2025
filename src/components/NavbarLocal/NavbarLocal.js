@@ -9,6 +9,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import logo from '../../assets/transparent_logo.png'
+import references from '../../assets/references.pdf';
 
 function Navbar_Local() {
   const [buttonVisible, setButtonVisible] = useState(true); 
@@ -64,7 +65,7 @@ function Navbar_Local() {
               <NavLink to="/about" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>About</NavLink>
             </Nav.Link>
             <Nav.Link style={{ color: "#fffefd", fontFamily: "Raleway"}}>
-              <NavLink to="/references" target="_blank" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>References</NavLink>
+              <NavLink to="/references"  style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>References</NavLink>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

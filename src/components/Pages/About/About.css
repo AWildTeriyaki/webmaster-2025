@@ -5,6 +5,7 @@
     margin: 0 auto;
     max-width: 1200px;
     color: #333;
+    padding-top: 50px;
   }
   
   /* Hero Section */
@@ -25,7 +26,7 @@
   
   .about-hero-text {
     width: 50%;
-    background-color: #fff;
+    background-color: #E6DBC5;
     padding: 2rem;
     display: flex;
     flex-direction: column;

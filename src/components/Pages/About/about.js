@@ -1,13 +1,12 @@
 import React from 'react';
 import './About.css'; 
-// import heroImage from 'https://ktinteriors.com/wp-content/uploads/2017/12/8-Trends-for-Great-Restaurant-Interior-Design.jpg'
 
 const About = () => {
   return (
     <section className="about-container">
       <div className="about-hero">
         <img
-          src="https://ktinteriors.com/wp-content/uploads/2017/12/8-Trends-for-Great-Restaurant-Interior-Design.jpg"
+          src="https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg"
           alt="Restaurant"
           className="about-hero-image"
         />
@@ -34,14 +33,14 @@ const About = () => {
 
         <h2>Our Accolades</h2>
         <p>
-        John’s work and dedication has been widely recognized, as he is proud to have won a Michelin Star and be awarded the most Sustainable Chef of the Year in 2024. His passion for elevating vegetarian cuisine continues to inspire diners and chefs alike.
+        John's work and dedication has been widely recognized, as he is proud to have won a Michelin Star and be awarded the most Sustainable Chef of the Year in 2024. His passion for elevating vegetarian cuisine continues to inspire diners and chefs alike.
 
         </p>
 
         <h2>Visit Us</h2>
         <p>
-          Whether you’re joining us for a casual lunch with friends or celebrating a special
-          occasion, we can’t wait to serve you. We hope our love for good food shines through in
+          Whether you're joining us for a casual lunch with friends or celebrating a special
+          occasion, we can't wait to serve you. We hope our love for good food shines through in
           every plate!
         </p>
       </div>

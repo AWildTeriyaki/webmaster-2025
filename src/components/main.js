@@ -2,7 +2,7 @@ import Home from './Pages/Home/home.js';
 import Menu from './Pages/Menu/menu.js';
 import About from './Pages/About/about.js';
 import Reservations from './Pages/reservations.js';
-import References from './Pages/references.js';
+import References from './Pages/References/references.js';
 import { Routes, Route } from 'react-router-dom';
 const Main = () => (
     <Routes>

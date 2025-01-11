@@ -8,6 +8,7 @@ import Card from 'react-bootstrap/Card';
 import Plant_Hands from '../../assets/card_illustrations/card_illustration_1.png';
 import Leaf_Whirl from '../../assets/card_illustrations/card_illustration_2.png';
 import Recycle from '../../assets/card_illustrations/card_illustration_3.png';
+import Plate from '../../assets/card_illustrations/card_illustration_4.png';
 
 function Cards2() {
     const [columnClass, setColumnClass] = useState("col");
@@ -70,7 +71,7 @@ function Cards2() {
                             <Card.Img variant="top" src={Leaf_Whirl} className="card-image" />
                             <Card.Body className="card-body">
                                 <Card.Title>Grown In-House</Card.Title>
-                                <Card.Text className="card-txt">All of our products are grown in the greenhouse space behind our restaurant, with all major resources coming from local farms.</Card.Text>
+                                <Card.Text className="card-txt">Many of our ingredients are grown in the greenhouse space behind our restaurant, with all major resources coming from local farms.</Card.Text>
                             </Card.Body>
                         </Card>
                     </div>
@@ -85,7 +86,7 @@ function Cards2() {
                     </div>
                     <div className="col card-col">
                         <Card style={{ borderRadius: 0 }}>
-                            <Card.Img variant="top" src={Plant_Hands} className="card-image" />
+                            <Card.Img variant="top" src={Plate} className="card-image" />
                             <Card.Body className="card-body">
                                 <Card.Title>Prepared For You!</Card.Title>
                                 <Card.Text className="card-txt">Every dish in our kitchen is made-to-order, so we prepare each meal specifically for each person. Food allergies and sensitivities will never be a problem.</Card.Text>
