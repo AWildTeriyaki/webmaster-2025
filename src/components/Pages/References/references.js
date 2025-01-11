@@ -1,7 +1,7 @@
 import './references.css';
 import references from '../../../assets/references.pdf';
 import plan_of_work from '../../../assets/plan_of_work.pdf';
-import copyright_checklist from '../../../assets/copyright.pdf';
+import copyright_checklist from '../../../assets/cc.pdf';
 
 const References = () => (
     <div className="references">
