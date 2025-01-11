@@ -30,7 +30,7 @@ function Hero2() {
             <div className="position-absolute" id="carousel-text-absolute">
                 <img alt="" src={ heroLogo }/>
                 <h1 className="display-5">100% Vegetarian. 100% Farm To Table.</h1>
-                <NavLink to='/reservations'><button className="btn-primary" id="hero-btn">Make a Reservation Today</button></NavLink>
+                <NavLink to='/reservation.html' target="_blank" rel="noopener noreferrer"><button className="btn-primary" id="hero-btn">Make a Reservation Today</button></NavLink>
             </div>
         </div>
     )

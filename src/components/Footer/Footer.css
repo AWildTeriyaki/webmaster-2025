@@ -15,7 +15,7 @@
     justify-content: center;
     text-align: center;
     
-    gap: 10px;
+    gap: 20px;
 }
 
 .footer-bottom img {
@@ -26,4 +26,14 @@
 .footer-text {
     color: white;
     padding-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .contact {
+        display: none;
+        border: red dashed 3px;
+    }
+    .footer-text {
+        font-size: 14px;
+    }
 }

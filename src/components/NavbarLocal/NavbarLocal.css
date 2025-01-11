@@ -20,3 +20,7 @@
     background-color: #2A3C2C !important;
     color: white !important;
 }
+
+.nav {
+    gap: 30px;
+}
