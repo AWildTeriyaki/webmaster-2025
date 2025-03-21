@@ -6,10 +6,9 @@ import Hero3 from '../../Hero3/Hero3.js';
 
 const Home = () => (
     <div className="home">
-    <Hero />
+    <Hero3 />
     <Cards2 />
     <MoralAppeal />
-    <Hero3 />
     </div>
 );
 
