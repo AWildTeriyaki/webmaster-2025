@@ -1,0 +1,10 @@
+.hero-background {
+    height: 100vh;
+
+    background-image: url("https://images.pexels.com/photos/325944/pexels-photo-325944.jpeg");
+    background-size: cover;
+}
+
+.hero-background .hero-mask {
+    background-color: rgba(0, 0, 0, 0.3);
+}
