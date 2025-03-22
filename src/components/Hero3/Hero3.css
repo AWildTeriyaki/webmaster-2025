@@ -42,10 +42,41 @@
     top: 20vh;
 }
 
+.btn-primary {
+    background-color: #2A3C2C !important;
+    border: #000000 solid 1px;
+    color: white;
+    transition-duration: 0.2s;
+    margin: 0;
+    padding: 2vw 3vw 2vw 3vw;
+    font-size: 18px;
+}
+
+.btn-primary:hover {
+    color: black;
+    background-color: #F6E966 !important;
+    border: white solid 1px;
+}
+
+.button-navlink {
+    color: black;
+    text-decoration: none;
+}
+
+#hero-btn {
+    border: none;
+    border-radius: 10px;
+    width: 30vw;
+    margin-top: 30px;
+
+    font-family: "Syne";
+    font-size: 2.5vw;
+}
+
 @media screen and (min-width: 678px) {
 
     .hero-img {
-        top: 10vh;
+        top: 20vh;
     }
 
     .hero-inner h1 {
@@ -54,8 +85,26 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    #hero-btn {
+        font-size: 16px;
+        width: 150px
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #hero-btn {
+        width: 250px;
+        font-size: 21px;
+        padding: 20px;
+    }
+}
+
 @media screen and (min-width: 1500px) {
     .hero-inner h1 {
         font-size: 50px;
+    }
+    .hero-inner button {
+        bottom: 200px;
     }
 }

@@ -12,6 +12,7 @@ const Hero3 = () => {
     const imgRef = useRef(null);
     const headerRef = useRef(null);
     const buttonRef = useRef(null);
+    const animationDuration = 1.5;
 
     useEffect(() => {
         const viewportWidth = window.innerWidth;
@@ -25,7 +26,7 @@ const Hero3 = () => {
             gsap.to(img, {
                 rotate: 360,
                 x: centerX - imgRect.left, // Move to center relative to current position
-                duration: 1
+                duration: animationDuration
             });
         }
         if (headerRef.current) {
@@ -36,7 +37,7 @@ const Hero3 = () => {
 
             gsap.to(header, {
                 x: centerX - headerRect.left,
-                duration: 1
+                duration: animationDuration
             })
         }
         if (buttonRef.current) {
@@ -47,7 +48,7 @@ const Hero3 = () => {
 
             gsap.to(button, {
                 x: centerX - buttonRect.left,
-                duration: 1
+                duration: animationDuration
             })
         }
     }, []);
