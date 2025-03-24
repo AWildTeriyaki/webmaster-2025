@@ -1,12 +1,12 @@
 .menu-promotion {
     height: 500px;
-    background-color: #2A3C2C;
+    background-color: #d4ceb6;
 
     text-align: center;
 }
 
 .menu-promotion h1 {
     font-size: 18px;
-    color: white;
+    color: black;
     font-family: 'Syne';
 }
