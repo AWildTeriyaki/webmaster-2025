@@ -3,10 +3,19 @@
     background-color: #d4ceb6;
 
     text-align: center;
+
+    padding: 30px;
 }
 
 .menu-promotion h1 {
     font-size: 18px;
     color: black;
     font-family: 'Syne';
+}
+
+.react-carousel {
+    padding-bottom: 30px;
+}
+
+.carousel-slide {
 }

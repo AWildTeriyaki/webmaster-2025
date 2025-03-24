@@ -1,9 +1,9 @@
 // components
 import Hero3 from '../../Hero3/Hero3.js';
+import Hero4 from '../../Hero4/Hero4.js';
 import Cards2 from '../../Cards2/Cards2.js';
 import MoralAppeal from '../../MoralAppeal/MoralAppeal.js';
 import MenuPromotion from '../../MenuPromotion/MenuPromotion.js';
-import Hero4 from '../../Hero4/Hero4.js';
 
 function Home() {
     return (
