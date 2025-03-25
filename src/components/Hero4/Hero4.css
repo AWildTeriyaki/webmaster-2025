@@ -60,7 +60,7 @@
     bottom: 15vh;
 }
 
-.wreath {
+#wreath {
     width: 250px;
     height: 250px;
 
@@ -69,4 +69,14 @@
     z-index: 0;
 
     opacity: 0;
+}
+
+#roses {
+    width: 1px;
+    height: 1px;
+
+    position: absolute;
+    z-index: 2;
+
+    opacity: 1;
 }

@@ -1,5 +1,5 @@
 .menu-promotion {
-    height: 500px;
+    height: 80vh;
     background-color: #d4ceb6;
 
     text-align: center;
@@ -15,7 +15,4 @@
 
 .react-carousel {
     padding-bottom: 30px;
-}
-
-.carousel-slide {
 }
