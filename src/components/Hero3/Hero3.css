@@ -1,0 +1,110 @@
+.hero-background {
+    height: 100vh;
+
+    background-image: url("https://images.pexels.com/photos/325944/pexels-photo-325944.jpeg");
+    background-size: cover;
+}
+
+.hero-background .hero-mask {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-background .hero-img {
+    width: 180px;
+    height: 180px;
+}
+
+.hero-background .hero-inner {
+    display: block;
+    color: white;
+}
+
+.hero-inner h1 {
+    margin-top: 30px;
+    position: absolute;
+    right: -100vw;
+
+    font-size: 21px;
+    text-align: center;
+}
+
+.hero-inner button {
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+
+    margin-top: 30px;
+}
+
+.hero-img {
+    position: absolute;
+    left: -180px;
+    top: 20vh;
+}
+
+.btn-primary {
+    background-color: #2A3C2C;
+    border: #000000 solid 1px;
+    color: white;
+    transition-duration: 0.2s;
+    margin: 0;
+    padding: 2vw 3vw 2vw 3vw;
+    font-size: 18px;
+}
+
+.btn-primary:hover {
+    color: black;
+    background-color: #F6E966;
+    border: white solid 1px;
+}
+
+.button-navlink {
+    color: black;
+    text-decoration: none;
+}
+
+#hero-btn {
+    border: none;
+    border-radius: 10px;
+    width: 30vw;
+    margin-top: 30px;
+
+    font-family: "Syne";
+    font-size: 2.5vw;
+}
+
+@media screen and (min-width: 678px) {
+
+    .hero-img {
+        top: 20vh;
+    }
+
+    .hero-inner h1 {
+        top: 40vh;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #hero-btn {
+        font-size: 16px;
+        width: 150px
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #hero-btn {
+        width: 250px;
+        font-size: 21px;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .hero-inner h1 {
+        font-size: 50px;
+    }
+    .hero-inner button {
+        bottom: 200px;
+    }
+}
