@@ -1,5 +1,7 @@
 import './Hero4.css';
 import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap';
+
 
 import { gsap } from "gsap";
 import { useEffect, useRef, useState } from "react";
@@ -47,18 +49,18 @@ const Hero4 = () => {
             const roses = rosesRef.current;
 
             const handleMouseEnter = () => {
-                gsap.to(roses, { 
+                gsap.to(roses, {
                     scale: 2,
                     opacity: 1,
-                    duration: animationDuration 
+                    duration: animationDuration
                 });
             };
 
             const handleMouseLeave = () => {
-                gsap.to(roses, { 
+                gsap.to(roses, {
                     scale: 1,
                     opacity: 0,
-                    duration: animationDuration 
+                    duration: animationDuration
                 });
             };
 
@@ -73,7 +75,7 @@ const Hero4 = () => {
     }, []);
 
     return (
-        <div className="hero-background" style={{ position: "relative" }}>
+        <div className="hero-background-2" style={{ position: "relative" }}>
             <div className="hero-mask d-flex w-100 h-100">
                 <div className="content-side">
                     <img alt="" src={heroLogo} className="hero-img-2" />
@@ -84,7 +86,17 @@ const Hero4 = () => {
                         <button ref={buttonRef} className="btn-primary" id="hero-btn">Make a Reservation Today</button>
                     </NavLink>
                 </div>
-                <div className="image-side"></div>
+                <div className="image-side">
+                    <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+                        <div className="carousel-inner">
+                            <div class="carousel-item active slide" id="slide1" />
+                            <div className="carousel-item slide" id="slide2"/>
+                            <div className="carousel-item slide" id="slide3">
+                                <img src="..." className="d-block w-100" alt="..." />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

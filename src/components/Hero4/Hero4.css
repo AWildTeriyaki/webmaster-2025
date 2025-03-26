@@ -1,4 +1,4 @@
-.hero-background {
+.hero-background-2 {
     height: 100vh;
 }
 
@@ -50,7 +50,6 @@
 .image-side {
     width: 60vw;
 
-    background-image: url('https://images.unsplash.com/photo-1599343871655-6b107ce7a4a5?q=80&w=3024');
     background-size: cover;
     background-position: right;
 }
@@ -58,6 +57,23 @@
 .hero-nav {
     position: absolute;
     bottom: 15vh;
+}
+
+.slide {
+    height: 100vh;
+    background-size: cover;
+}
+
+#slide1 {
+    background-image: url("https://images.unsplash.com/photo-1599343871655-6b107ce7a4a5?q=80&w=3024");
+}
+
+#slide2 {
+    background-image: url('https://images.pexels.com/photos/1574547/pexels-photo-1574547.jpeg');
+}
+
+#slide3 {
+    background-image: url('https://images.pexels.com/photos/325944/pexels-photo-325944.jpeg');
 }
 
 #wreath {

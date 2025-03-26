@@ -9,7 +9,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import logo from '../../assets/transparent_logo.png'
-import references from '../../assets/references.pdf';
 
 function Navbar_Local() {
   const [buttonVisible, setButtonVisible] = useState(true); 

@@ -47,10 +47,10 @@ function MenuPromotion() {
         itemClass="carousel-item-padding-40-px"
         className="react-carousel w-100 h-100"
       >
-        <div className="carousel-slide w-100 h-100" id="item1"><img src="https://blocks.astratic.com/img/general-img-square.png"/></div>
-        <div className="carousel-slide w-100 h-100" id="item2"><img src="https://blocks.astratic.com/img/general-img-square.png"/></div>
-        <div className="carousel-slide w-100 h-100" id="item3"><img src="https://blocks.astratic.com/img/general-img-square.png"/></div>
-        <div className="carousel-slide w-100 h-100" id="item4"><img src="https://blocks.astratic.com/img/general-img-square.png"/></div>
+        <div className="carousel-slide w-100 h-100" id="item1"><img alt="" src="https://blocks.astratic.com/img/general-img-square.png"/></div>
+        <div className="carousel-slide w-100 h-100" id="item2"><img alt="" src="https://blocks.astratic.com/img/general-img-square.png"/></div>
+        <div className="carousel-slide w-100 h-100" id="item3"><img alt="" src="https://blocks.astratic.com/img/general-img-square.png"/></div>
+        <div className="carousel-slide w-100 h-100" id="item4"><img alt="" src="https://blocks.astratic.com/img/general-img-square.png"/></div>
       </Carousel>
     </div>
   );
