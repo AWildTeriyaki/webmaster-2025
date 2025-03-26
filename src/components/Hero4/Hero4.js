@@ -48,14 +48,16 @@ const Hero4 = () => {
 
             const handleMouseEnter = () => {
                 gsap.to(roses, { 
-                    scale: 100, 
+                    scale: 2,
+                    opacity: 1,
                     duration: animationDuration 
                 });
             };
 
             const handleMouseLeave = () => {
                 gsap.to(roses, { 
-                    scale: 1, 
+                    scale: 1,
+                    opacity: 0,
                     duration: animationDuration 
                 });
             };
