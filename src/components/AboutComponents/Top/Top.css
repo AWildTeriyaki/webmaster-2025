@@ -1,0 +1,33 @@
+.top {
+    position: relative;
+    height: 50vh;
+    background-image: url('https://images.pexels.com/photos/841303/pexels-photo-841303.jpeg');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    z-index: 0;
+}
+
+.about-mask {
+    background-color: rgba(0, 0, 0, 0.15);
+    height: 50vh;
+    z-index: 1;
+}
+
+.top-logo {
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+    z-index: 2;
+}
+
+.top h1 {
+    color: white;
+    z-index: 2;
+}

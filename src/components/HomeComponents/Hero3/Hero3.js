@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { NavLink } from 'react-router-dom';
 
-import heroLogo from '../../assets/logo.png';
+import heroLogo from '../../../assets/logo.png';
 
 const Hero3 = () => {
 

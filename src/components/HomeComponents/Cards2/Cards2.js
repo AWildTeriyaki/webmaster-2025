@@ -5,15 +5,14 @@ import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 
 // assets
-import Plant_Hands from '../../assets/card_illustrations/card_illustration_1.png';
-import Leaf_Whirl from '../../assets/card_illustrations/card_illustration_2.png';
-import Recycle from '../../assets/card_illustrations/card_illustration_3.png';
-import Plate from '../../assets/card_illustrations/card_illustration_4.png';
+import Plant_Hands from '../../../assets/card_illustrations/card_illustration_1.png';
+import Leaf_Whirl from '../../../assets/card_illustrations/card_illustration_2.png';
+import Recycle from '../../../assets/card_illustrations/card_illustration_3.png';
+import Plate from '../../../assets/card_illustrations/card_illustration_4.png';
 
 function Cards2() {
     const [columnClass, setColumnClass] = useState("col");
 
-    // Function to handle screen width changes
     const handleResize = () => {
         if (window.innerWidth >= 768) {
             setColumnClass("col");
@@ -23,13 +22,10 @@ function Cards2() {
     };
 
     useEffect(() => {
-        // Set initial class based on the current window size
         handleResize();
 
-        // Add event listener for window resize
         window.addEventListener("resize", handleResize);
 
-        // Cleanup event listener on unmount
         return () => {
             window.removeEventListener("resize", handleResize);
         };

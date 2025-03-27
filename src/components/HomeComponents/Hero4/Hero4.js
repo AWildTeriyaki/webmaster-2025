@@ -7,9 +7,9 @@ import { gsap } from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { NavLink } from 'react-router-dom';
 
-import heroLogo from '../../assets/logo.png';
-import wreath from '../../assets/wreath.png';
-import roses from '../../assets/roses.png';
+import heroLogo from '../../../assets/logo.png';
+import wreath from '../../../assets/wreath.png';
+import roses from '../../../assets/roses.png';
 
 const Hero4 = () => {
     const imgRef = useRef(null);

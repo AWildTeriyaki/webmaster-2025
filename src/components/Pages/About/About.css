@@ -8,7 +8,6 @@
     padding-top: 50px;
   }
   
-  /* Hero Section */
   .about-hero {
     position: relative;
     width: 100%;
@@ -43,7 +42,6 @@
     line-height: 1.6;
   }
   
-  /* Content Section */
   .about-content {
     padding: 1rem 2rem;
   }
@@ -51,8 +49,8 @@
   .about-content h2 {
     margin-top: 2rem;
     font-size: 1.8rem;
-    color: #aa3b3b; /* change to your brand color if desired */
-    border-bottom: 2px solid #f0c0c0; /* subtle separator under heading */
+    color: #aa3b3b;
+    border-bottom: 2px solid #f0c0c0;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
   }
