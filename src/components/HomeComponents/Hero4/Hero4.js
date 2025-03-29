@@ -87,11 +87,11 @@ const Hero4 = () => {
                     </NavLink>
                 </div>
                 <div className="image-side">
-                    <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+                    <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                         <div className="carousel-inner">
-                            <div class="carousel-item active slide" id="slide1" />
+                            <div class="carousel-item slide" id="slide1" />
                             <div className="carousel-item slide" id="slide2"/>
-                            <div className="carousel-item slide" id="slide3">
+                            <div className="carousel-item active slide" id="slide3">
                                 <img src="..." className="d-block w-100" alt="..." />
                             </div>
                         </div>
