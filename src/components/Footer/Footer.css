@@ -31,9 +31,14 @@
 @media screen and (max-width: 600px) {
     .contact {
         display: none;
-        border: red dashed 3px;
     }
     .footer-text {
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .footer-text {
+        font-size: 10px;
     }
 }

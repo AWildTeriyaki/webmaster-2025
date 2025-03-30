@@ -12,7 +12,6 @@ img {
 
 .moral-appeal-text {
     padding: 30px;
-    padding-top: 10vh;
 }
 
 .moral-appeal-text h1 {
@@ -31,9 +30,28 @@ img {
 #moral-appeal-button {
     background-color: #F6E966 !important;
     color: black;
+    border-radius: 5px;
 }
 
 #moral-appeal-button:hover {
     background-color:#2A3C2C !important;
     color: white;
+}
+
+@media screen and (min-width: 500px) {
+    .moral-appeal-text {
+        padding-top: 10vh;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #moral-appeal-button {
+        font-size: 28px;
+        margin-top: 30px;
+        border-radius: 10px;
+    }
+    .moral-appeal-text {
+        padding: 80px;
+        padding-top: 50px;
+    }
 }
