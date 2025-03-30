@@ -23,8 +23,11 @@ function StaffIntro() {
                              wants to demonstrate how inventive and delectable plant-based cuisine can be.
                                His food blends strong flavors with a dash of nostalgia to create meals that 
                                are both familiar and thrilling.  John spends his time outside of the kitchen 
-                               working in his restaurant's greenhouse and assisting with animal rescue to make 
-                               sure his menu always uses the freshest ingredients.</p>
+                               working in his restaurant's greenhouse to ensure that he can always use the 
+                               freshest ingredients possible.</p>
+                        <p>John's work and dedication has been widely recognized, as he is proud to have won a 
+                            Michelin Star and be awarded the most Sustainable Chef of the Year in 2024. His passion 
+                            for elevating vegetarian cuisine continues to inspire diners and chefs alike.</p>
                     </div>
                     <div className="image-side-2">
                     </div>
