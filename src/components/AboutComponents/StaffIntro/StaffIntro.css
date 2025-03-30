@@ -43,6 +43,7 @@
     height: 100%;
 
     flex-direction: column;
+    align-items: center;
 }
 
 .text-side {
@@ -52,6 +53,7 @@
     
     padding-right: 50px;
     margin-bottom: 20px;
+    padding-left: 20px;
 }
 
 .image-side-2 {
@@ -63,6 +65,10 @@
     background-position: center;
 
     border-radius: 20px;
+}
+
+.gardener-image {
+    margin-bottom: 50px;
 }
 
 @media screen and (min-width: 678px) {
@@ -78,6 +84,11 @@
     }
     .text-side {
         width: 40vw;
+        padding-left: 0;
+    }
+    .gardener-text {
+        width: 60vw;
+        padding-left: 50px;
     }
     .image-side-2 {
         width: 40vw;
