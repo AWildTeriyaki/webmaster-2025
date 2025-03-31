@@ -1,39 +1,39 @@
 import React, { useState, useEffect } from "react";
+import gsap from 'gsap';
 import './Cards2.css';
 import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-import Card from 'react-bootstrap/Card';
-
-// assets
-import Plant_Hands from '../../../assets/card_illustrations/card_illustration_1.png';
-import Leaf_Whirl from '../../../assets/card_illustrations/card_illustration_2.png';
-import Recycle from '../../../assets/card_illustrations/card_illustration_3.png';
-import Plate from '../../../assets/card_illustrations/card_illustration_4.png';
-
 function Cards2() {
-    const [columnClass, setColumnClass] = useState("col");
-
-    const handleResize = () => {
-        if (window.innerWidth >= 768) {
-            setColumnClass("col");
-        } else {
-            setColumnClass("col-md-6");
-        }
-    };
 
     useEffect(() => {
-        handleResize();
+        gsap.utils.toArray(".newcard").forEach(function (card) {
+            gsap.set(card, {
+                transformStyle: "preserve-3d",
+                transformPerspective: 1000
+            });
+            const q = gsap.utils.selector(card);
+            const front = q(".card-front");
+            const back = q(".card-back");
 
-        window.addEventListener("resize", handleResize);
+            gsap.set(back, { rotationX: -180 });
 
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
+            const tl = gsap.timeline({ paused: true })
+                .to(front, { duration: 1, rotationX: 180 })
+                .to(back, { duration: 1, rotationX: 0 }, 0)
+                .to(card, { z: 50 }, 0)
+                .to(card, { z: 0 }, 0.5);
+            card.addEventListener("mouseenter", function () {
+                tl.play();
+            });
+            card.addEventListener("mouseleave", function () {
+                tl.reverse();
+            });
+        });
     }, []);
 
     return (
-        <div className="row" id="outer-row">
-            <div className={`position-relative w-100 h-100 ${columnClass}`} id="outer-text-col">
+        <div id="outer-row">
+            <div className={`position-relative w-100 h-100`} id="outer-text-col">
                 <img alt="" src="https://images.pexels.com/photos/4113889/pexels-photo-4113889.jpeg" id="cards-image" />
                 <div className="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100" id="mask">
                     <div className="row w-100 h-100">
@@ -51,43 +51,37 @@ function Cards2() {
                     </div>
                 </div>
             </div>
-            <div className={`cards-col h-100 ${columnClass}`}>
-                <div className="row row-cols-1 row-cols-md-2 row-cols-2 g-4 h-100">
-                    <div className="col card-col" style={{ padding: 0 }}>
-                        <Card style={{ borderRadius: 0 }}>
-                            <Card.Img variant="top" src={Plant_Hands} className="card-image" />
-                            <Card.Body className="card-body">
-                                <Card.Title>Plant Based</Card.Title>
-                                <Card.Text className="card-txt">All of our food and preparation materials are plant-based, from our cauliflower steaks to the "butter" we use to make them.</Card.Text>
-                            </Card.Body>
-                        </Card>
+            <div className="new-cards">
+                <div className="newcard">
+                    <div className="card-front">
+                        <h1>Plant Based</h1>
                     </div>
-                    <div className="col card-col">
-                        <Card style={{ borderRadius: 0, margin: 0 }}>
-                            <Card.Img variant="top" src={Leaf_Whirl} className="card-image" />
-                            <Card.Body className="card-body">
-                                <Card.Title>Grown In-House</Card.Title>
-                                <Card.Text className="card-txt">Many of our ingredients are grown in the greenhouse space behind our restaurant, with all major resources coming from local farms.</Card.Text>
-                            </Card.Body>
-                        </Card>
+                    <div className="card-back">
+                        <p>All of our food and preparation materials are plant-based, from our cauliflower steaks to the "butter" we use to make them.</p>
                     </div>
-                    <div className="col card-col">
-                        <Card style={{ borderRadius: 0, margin: 0 }}>
-                            <Card.Img variant="top" src={Recycle} className="card-image" />
-                            <Card.Body className="card-body">
-                                <Card.Title>Sustainable Materials</Card.Title>
-                                <Card.Text className="card-txt">Any and all items like utensils, packaging, etc., are made out of compostable and/or recyclable materials.</Card.Text>
-                            </Card.Body>
-                        </Card>
+                </div>
+                <div className="newcard">
+                    <div className="card-front">
+                        <h1>Grown In-House</h1>
                     </div>
-                    <div className="col card-col">
-                        <Card style={{ borderRadius: 0 }}>
-                            <Card.Img variant="top" src={Plate} className="card-image" />
-                            <Card.Body className="card-body">
-                                <Card.Title>Prepared For You!</Card.Title>
-                                <Card.Text className="card-txt">Every dish in our kitchen is made-to-order, so we prepare each meal specifically for each person. Food allergies and sensitivities will never be a problem.</Card.Text>
-                            </Card.Body>
-                        </Card>
+                    <div className="card-back">
+                        <p>Many of our ingredients are grown in the greenhouse space behind our restaurant, with all major resources coming from local farms.</p>
+                    </div>
+                </div>
+                <div className="newcard">
+                    <div className="card-front">
+                        <h1>Sustainable Materials</h1>
+                    </div>
+                    <div className="card-back">
+                        <p>Any and all items like utensils, packaging, etc., are made out of compostable and/or recyclable materials.</p>
+                    </div>
+                </div>
+                <div className="newcard">
+                    <div className="card-front">
+                        <h1>Prepared for You!</h1>
+                    </div>
+                    <div className="card-back">
+                        <p>Every dish in our kitchen is made-to-order, so we prepare each meal specifically for each person. Food allergies and sensitivities will never be a problem.</p>
                     </div>
                 </div>
             </div>

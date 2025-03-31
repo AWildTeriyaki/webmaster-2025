@@ -28,7 +28,6 @@ function MenuPromotion() {
 
   return (
     <div className="menu-promotion">
-      <h1>Menu</h1>
       <Carousel
         swipeable={false}
         draggable={false}
@@ -42,15 +41,14 @@ function MenuPromotion() {
         customTransition="all .5"
         transitionDuration={500}
         containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
         className="react-carousel w-100 h-100"
       >
-        <div className="carousel-slide w-100 h-100" id="item1"><img alt="" src="https://blocks.astratic.com/img/general-img-square.png"/></div>
-        <div className="carousel-slide w-100 h-100" id="item2"><img alt="" src="https://blocks.astratic.com/img/general-img-square.png"/></div>
-        <div className="carousel-slide w-100 h-100" id="item3"><img alt="" src="https://blocks.astratic.com/img/general-img-square.png"/></div>
-        <div className="carousel-slide w-100 h-100" id="item4"><img alt="" src="https://blocks.astratic.com/img/general-img-square.png"/></div>
+        <div className="carousel-slide w-100 h-100" id="item1"><img alt="" src="https://nikkivegan.com/wp-content/uploads/2021/07/img_5747.jpg"/></div>
+        <div className="carousel-slide w-100 h-100" id="item2"><img alt="" src="https://www.walderwellness.com/wp-content/uploads/2022/11/Maple-Roasted-Delicata-Squash-Walder-Wellness-10.jpg"/></div>
+        <div className="carousel-slide w-100 h-100" id="item3"><img alt="" src="https://www.pro-activ.com/en-gb/-/media/Project/Upfield/Brands/ProActiv/ProActiv-Live-UK/Assets/Recipes/d9768ba2-37a7-47d2-a4ff-4b631a206f59.jpg?rev=a55b4e01049f4093bc4094660d629d39"/></div>
+        <div className="carousel-slide w-100 h-100" id="item4"><img alt="" src="https://cdn.loveandlemons.com/wp-content/uploads/2023/01/mushroom-risotto.jpg"/></div>
       </Carousel>
     </div>
   );

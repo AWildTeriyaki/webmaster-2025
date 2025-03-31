@@ -1,18 +1,16 @@
 .menu-promotion {
     height: 80vh;
-    background-color: #d4ceb6;
+    background-color: #024958;
 
     text-align: center;
 
-    padding: 30px;
+    padding: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .menu-promotion h1 {
     font-size: 18px;
-    color: black;
+    color: white;
     font-family: 'Syne';
-}
-
-.react-carousel {
-    padding-bottom: 30px;
 }

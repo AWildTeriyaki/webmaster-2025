@@ -1,12 +1,10 @@
-.row,
-.col {
-    padding: 0;
-    margin: 0;
-}
-
 #outer-row {
-    height: auto;
-    min-height: 100vh;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: white;
 }
 
 #outer-text-col {
@@ -16,10 +14,11 @@
 #mask {
     padding: 20px;
 
-    background-color: rgba(42,60,44,0.5);
+    background-color: rgba(42, 60, 44, 0.5);
 }
 
-#mask h1, p {
+#mask h1,
+p {
     opacity: 1;
 }
 
@@ -30,7 +29,7 @@
 }
 
 .text-col {
-    color: #E6DBC5;
+    color: white;
 }
 
 .text-col h1 {
@@ -46,59 +45,66 @@
     display: inline-block;
 }
 
-.cards-col {
+.new-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: fit-content;
+    padding: 30px;
+}
+
+.newcard {
+    width: 50vw;
+    height: calc((100vh - 120px) / 4);
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.card-front, .card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 0;
+    backface-visibility: hidden;
+
+    padding: 30px;
+
+    border-radius: 10px;
 }
 
-.card-col {
-    padding: 0;
-    margin: 0;
+.card-front {
+    background-color: #2A3C2C;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card-txt {
-    font-size: 12px;
+.card-back {
+    background-color: #2A3C2C;
+    transform: rotateX(180deg);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.card-image {
-    object-fit: contain;
-    width: 100%;
-    height: 130px;
-}
-
-.card {
-    height: 50vh;
-    padding: 0;
-    margin: 0;
-}
-
-.card-title {
-    text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-    .card-text {
-        font-size: 1.5vw;
+@media screen and (max-width: 768px) {
+    #outer-row {
+        flex-direction: column;
+        height: 200vh;
     }
-    .card-title {
-        font-size: 2.5vw;
-    }
-    .text-col p {
-        font-size: 23px;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    .card-text {
-        font-size: 16px;
-    }
-    .card-title {
-        font-size: 28px;
-    }
-    .card {
-        padding: 30px;
+    .newcard {
+        width: 100%;
+        height: calc((100vh - 120px) / 4);
     }
 }

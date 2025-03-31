@@ -1,0 +1,52 @@
+.facts {
+    background-color: #024958;
+    color: white;
+    
+    text-align: center;
+
+    padding: 30px;
+}
+.facts h1 {
+    padding-bottom: 20px;
+}
+.facts ul {
+    margin: 0;
+    text-align: left;
+
+    list-style-type: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.facts ul li {
+    display: inline-block;
+    text-align: center;
+}
+.important {
+    color: #F6E966;
+    margin: 0;
+    padding: 0;
+
+    display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+    .facts ul {
+        justify-content: center;
+        gap: 20px;
+    }
+    .facts ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .facts ul li {
+        font-size: 21px;
+    }
+    .facts {
+        padding: 60px;
+    }
+}
