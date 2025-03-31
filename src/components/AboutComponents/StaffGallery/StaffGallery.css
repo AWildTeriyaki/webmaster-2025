@@ -1,18 +1,18 @@
 .gallery-row {
-    height: 100vh;
+    height: 90vh;
     padding-left: 20px;
     padding-right: 20px;
 
-    gap: 20px;
+    gap: 30px;
 }
 
 .gallery-col {
-    height: 100vh;
+    height: 90vh;
     width: 33vw;
 
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 
 .long-image {
