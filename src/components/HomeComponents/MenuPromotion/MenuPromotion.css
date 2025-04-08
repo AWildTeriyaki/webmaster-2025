@@ -14,3 +14,7 @@
     color: white;
     font-family: 'Syne';
 }
+
+.react-carousel {
+    border-radius: 15px;
+}
