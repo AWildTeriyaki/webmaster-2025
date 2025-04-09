@@ -18,7 +18,7 @@ function Navbar_Local() {
       tl.to(navbarRef.current, {
         opacity: 1,
         duration: 2,
-        delay: 2,
+        delay: 1.5,
       })
     }, []);
 

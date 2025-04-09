@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import gsap from 'gsap';
 import './Cards2.css';
 import '/node_modules/bootstrap/dist/css/bootstrap.min.css';

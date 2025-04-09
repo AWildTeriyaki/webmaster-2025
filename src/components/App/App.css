@@ -6,10 +6,44 @@ html,body
     padding: 0px;
     position:relative;
     overflow-x: hidden;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .app {
     background-color: #E6DBC5;
     scroll-behavior: smooth;
     font-family: 'Marmelad';  
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+
+.transparent-logo {
+    width: 300px;
+    height: 150px;
+    
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 150px);
+
+    background-image: url('../../assets/transparent_logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    z-index: 5;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
