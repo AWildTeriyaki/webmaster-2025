@@ -35,7 +35,7 @@ function App() {
         
         tl.to(transparentLogoRef.current, {
             zIndex: 0,
-            duration: 0.5,
+            duration: 0,
         });
 
         return () => {
