@@ -14,6 +14,23 @@
     gap: 10px;
 }
 
+.no-scroll {
+    overflow: hidden;
+  }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
 .hero-mask {
     position: absolute;
     width: 100vw;
@@ -22,12 +39,14 @@
 }
 
 .hero-logo {
-    width: 300px;
+    width: 150px;
     height: 150px;
 
-    background-image: url('../../../assets/transparent_logo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 100px);
+
+    z-index: 3 !important;
 }
 
 .hero img {
@@ -40,6 +59,7 @@
 .hero h1 {
     margin: 0;
     margin-bottom: 20px;
+    margin-top: 180px;
 
     color: white;
 

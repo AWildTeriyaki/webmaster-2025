@@ -2,7 +2,8 @@ import './NavbarLocal.css';
 import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';  // Import useState
+import { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -11,18 +12,28 @@ import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../assets/transparent_logo.png'
 
 function Navbar_Local() {
-  const [buttonVisible, setButtonVisible] = useState(true); 
-  const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(true);  
+    const navbarRef = useRef(null);
+    useEffect(() => {
+      const tl = gsap.timeline();
+      tl.to(navbarRef.current, {
+        opacity: 1,
+        duration: 2,
+        delay: 2,
+      })
+    }, []);
+
+  const [buttonVisible, setButtonVisible] = useState(true);
+  const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(true);
   const handleLogoClick = () => {
-    setButtonVisible(!buttonVisible); 
+    setButtonVisible(!buttonVisible);
   };
 
   const handleNavbarCollapse = () => {
-    setIsNavbarCollapsed(prevState => !prevState); 
+    setIsNavbarCollapsed(prevState => !prevState);
   };
 
   const handleTransitionEnd = () => {
-    
+
     if (!isNavbarCollapsed) {
       setButtonVisible(false);
     }
@@ -32,7 +43,7 @@ function Navbar_Local() {
   };
 
   return (
-    <Navbar fixed="top" expand="md" data-bs-theme="dark" className="bg-body-tertiary" id="navbar">
+    <Navbar fixed="top" expand="md" data-bs-theme="dark" className="bg-body-tertiary" id="navbar" ref={ navbarRef }>
       <Container>
         <Navbar.Brand href="#home" onClick={handleLogoClick}>
           <NavLink to='/'>
@@ -47,11 +58,11 @@ function Navbar_Local() {
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className="ms-auto"
-          onClick={handleNavbarCollapse}  
+          onClick={handleNavbarCollapse}
         />
         <Navbar.Collapse
           id="basic-navbar-nav"
-          onTransitionEnd={handleTransitionEnd} 
+          onTransitionEnd={handleTransitionEnd}
         >
           <Nav className="me-auto w-100 nav-justified">
             <Nav.Link>
@@ -63,8 +74,8 @@ function Navbar_Local() {
             <Nav.Link>
               <NavLink to="/about" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>About</NavLink>
             </Nav.Link>
-            <Nav.Link style={{ color: "#fffefd", fontFamily: "Raleway"}}>
-              <NavLink to="/references"  style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>References Page</NavLink>
+            <Nav.Link style={{ color: "#fffefd", fontFamily: "Raleway" }}>
+              <NavLink to="/references" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>References Page</NavLink>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

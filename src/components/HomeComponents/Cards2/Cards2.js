@@ -34,9 +34,8 @@ function Cards2() {
     return (
         <div id="outer-row">
             <div className={`position-relative w-100 h-100`} id="outer-text-col">
-                <img alt="" src="https://images.pexels.com/photos/4113889/pexels-photo-4113889.jpeg" id="cards-image" />
                 <div className="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100" id="mask">
-                    <div className="row w-100 h-100">
+                    <div className="row w-100 h-100" id="inner-row">
                         <div className="col">
                             <div className="row w-100 h-100 text-row">
                                 <div className="col text-col">

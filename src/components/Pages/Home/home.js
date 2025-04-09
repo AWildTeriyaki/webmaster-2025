@@ -12,9 +12,7 @@ function Home() {
         <div className="home">
             <LastHero />
             <MenuPromotion />
-            <CustomerReviews />
             <Cards2 />
-            <Facts />
             {window.innerWidth > 768 ? <MoralAppealLarge /> : <MoralAppeal />}
         </div>
     );

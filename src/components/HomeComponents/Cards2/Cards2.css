@@ -9,12 +9,14 @@
 
 #outer-text-col {
     padding: 0;
+
+    background-image: url('https://images.pexels.com/photos/4113889/pexels-photo-4113889.jpeg');
+    background-size: cover;
 }
 
-#mask {
+#inner-row {
+    background-color: rgba(246, 233, 102, 0.1);
     padding: 20px;
-
-    background-color: rgba(42, 60, 44, 0.5);
 }
 
 #mask h1,
@@ -29,7 +31,7 @@ p {
 }
 
 .text-col {
-    color: white;
+    color: #fbf8f8;
 }
 
 .text-col h1 {

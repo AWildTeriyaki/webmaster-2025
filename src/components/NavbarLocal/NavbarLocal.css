@@ -1,6 +1,7 @@
 #navbar {
     background-color: #508D4E !important;
-    font-family: 'Marmelad';  
+    font-family: 'Marmelad'; 
+    opacity: 0;
 }
 
 #navbar-logo {

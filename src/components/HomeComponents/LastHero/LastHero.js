@@ -12,9 +12,42 @@ function LastHero() {
 
     const rosesRef = useRef(null);
     const buttonRef = useRef(null);
+    const logoRef = useRef(null);
+    const overlayRef = useRef(null);
     const [buttonPosition, setButtonPosition] = useState({ top: 0, left: 0, width: 0 });
-    
-    const animationDuration = 0.3; 
+
+    const animationDuration = 0.3;
+
+    useEffect(() => {
+        document.body.classList.add('no-scroll');
+
+        const tl = gsap.timeline({
+            onComplete: () => {
+                // Re-enable scroll after animation completes
+                document.body.classList.remove('no-scroll');
+            }
+        });
+
+        tl.to(logoRef.current, {
+            y: -170,
+            duration: 1,
+            ease: 'power2.out',
+            delay: 2,
+          }, "<");
+
+        tl.to(overlayRef.current, {
+            opacity: 0,
+            zIndex: 0,
+            duration: 1.5,
+            ease: 'power2.out',
+        })
+
+        return () => {
+            // Clean up just in case
+            document.body.classList.remove('no-scroll');
+        };
+
+    }, []);
 
     useEffect(() => {
         if (buttonRef.current) {
@@ -68,12 +101,15 @@ function LastHero() {
 
     return (
         <section className="hero">
+            <div className="outer-overlay">
+            <div className="overlay" ref={overlayRef} />
+            <img src={ HeroLogo } ref={ logoRef } className="hero-logo"/>
+            </div>
             <div className="hero-mask d-flex w-100 h-100" />
-            <img src={ HeroLogo } />
             <h1>100% Vegetarian,<br />100% Farm-to-Table.</h1>
             <img alt="" src={roses} ref={rosesRef} id="roses" />
             <NavLink to='/reservation.html' target="_blank" rel="noopener noreferrer" className="hero-nav">
-                <button className="btn-primary" id="hero-btn" ref={ buttonRef }>Make a Reservation Today</button>
+                <button className="btn-primary" id="hero-btn" ref={buttonRef} >Make a Reservation Today</button>
             </NavLink>
         </section>
     );
