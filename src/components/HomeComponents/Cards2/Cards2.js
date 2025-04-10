@@ -35,19 +35,8 @@ function Cards2() {
         <div id="outer-row">
             <div className={`position-relative w-100 h-100`} id="outer-text-col">
                 <div className="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100" id="mask">
-                    <div className="row w-100 h-100" id="inner-row">
-                        <div className="col">
-                            <div className="row w-100 h-100 text-row">
-                                <div className="col text-col">
-                                    <h1 className="display">Delicious meals grown and prepared in our kitchen.</h1>
-                                </div>
-                                <div className="col text-col">
-                                    <p className="lead" id="subheading">Come have a look, then have a taste!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col"></div>
-                    </div>
+                    <h1>Delicious meals, grown and prepared in our kitchen.</h1>
+                    <h1>Come have a look, then have a taste!</h1>
                 </div>
             </div>
             <div className="new-cards">

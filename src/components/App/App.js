@@ -28,12 +28,11 @@ function App() {
 
         tl.to(overlayRef.current, {
             opacity: 0,
-            zIndex: 0,
             duration: 1.5,
             ease: 'power2.out',
         })
-        
-        tl.to(transparentLogoRef.current, {
+
+        tl.to(overlayRef.current, {
             zIndex: 0,
             duration: 0,
         });

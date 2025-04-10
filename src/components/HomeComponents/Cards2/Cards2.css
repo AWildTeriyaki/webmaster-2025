@@ -14,14 +14,19 @@
     background-size: cover;
 }
 
-#inner-row {
+#mask {
     background-color: rgba(246, 233, 102, 0.1);
+
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: calc(50vh - 28px);
 }
 
-#mask h1,
-p {
-    opacity: 1;
+#mask h1 {
+    color: #fbf8f8;
+    font-size: 28px;
 }
 
 #cards-image {
@@ -32,6 +37,10 @@ p {
 
 .text-col {
     color: #fbf8f8;
+    align-items: left;
+    padding: 0;
+    justify-content: left !important;
+    text-align: left !important;
 }
 
 .text-col h1 {
@@ -45,7 +54,9 @@ p {
 
 .text-row {
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
+    height: 100%;
+    width: 50%;
 }
 
 .new-cards {
@@ -55,6 +66,8 @@ p {
     width: 100%;
     height: fit-content;
     padding: 30px;
+
+    background-color: #fbf8f8;
 }
 
 .newcard {
@@ -109,5 +122,20 @@ p {
     .newcard {
         width: 100%;
         height: calc((100vh - 120px) / 4);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #mask h1 {
+        font-size: 36px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #mask {
+        padding: 50px;
+    }
+    #mask h1 {
+        font-size: 40px;
     }
 }
