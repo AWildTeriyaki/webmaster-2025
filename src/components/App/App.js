@@ -33,7 +33,12 @@ function App() {
         })
 
         tl.to(overlayRef.current, {
-            zIndex: 0,
+            zIndex: -1,
+            duration: 0,
+        });
+
+        tl.to(transparentLogoRef.current, {
+            zIndex: -1,
             duration: 0,
         });
 
