@@ -29,18 +29,13 @@ function MenuPromotion() {
   return (
     <div className="menu-promotion">
       <Carousel
-        swipeable={false}
-        draggable={false}
-        showDots={false}
         responsive={responsive}
-        ssr={true} // means to render carousel on server-side.
+        autoPlay={true}
+        swipeable={true}
+        draggable={true}
+        showDots={true}
         infinite={true}
-        autoPlay={false}
-        autoPlaySpeed={1000}
-        keyBoardControl={true}
-        customTransition="all .5"
-        transitionDuration={500}
-        containerClass="carousel-container"
+        partialVisible={false}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
         className="react-carousel w-100 h-100"
