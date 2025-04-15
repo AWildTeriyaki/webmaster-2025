@@ -69,7 +69,7 @@ function Navbar_Local() {
               <NavLink to="/" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>Home</NavLink>
             </Nav.Link>
             <Nav.Link>
-              <NavLink to="/menu" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>Menu</NavLink>
+              <NavLink to="/gallery" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>Gallery</NavLink>
             </Nav.Link>
             <Nav.Link>
               <NavLink to="/about" style={{ color: "#fffefd", fontFamily: "Raleway", textDecoration: "none" }}>About</NavLink>
