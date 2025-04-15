@@ -81,7 +81,7 @@ function Navbar_Local() {
         </Navbar.Collapse>
 
         {buttonVisible && isNavbarCollapsed && (
-          <NavLink to="/orderform.html" target="_blank" rel="noopener noreferrer">
+          <NavLink to="/order" target="_blank" rel="noopener noreferrer">
             <button className="btn navbar-button">Order Online</button>
           </NavLink>
         )}
