@@ -57,7 +57,7 @@ const OrderForm = () => {
     setShowCart(false);
   };
 
-    const categories = [...new Set(menuItems.map((item) => item.category))];
+  const categories = [...new Set(menuItems.map((item) => item.category))];
 
   return (
     <div style={{ maxWidth: '800px', margin: 'auto', padding: '24px', backgroundColor: '#fff', boxShadow: '0 2px 5px rgba(0,0,0,0.3)', borderRadius: '8px' }}>
@@ -75,7 +75,6 @@ const OrderForm = () => {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
                 {menuItems.filter((item) => item.category === category).map((item) => (
                   <div key={item.id} style={{ border: '1px solid #ddd', padding: '8px', borderRadius: '8px' }}>
-                    <img src={item.image} alt={item.name} style={{ width: '100%', height: '128px', objectFit: 'cover', borderRadius: '4px' }} />
                     <h4 style={{ marginTop: '8px', fontWeight: '500' }}>{item.name}</h4>
                     <p style={{ fontSize: '14px' }}>{item.description}</p>
                     <p style={{ fontWeight: '600' }}>${item.price}</p>
@@ -108,7 +107,95 @@ const OrderForm = () => {
             <p style={{ fontWeight: 'bold' }}>Total: ${total}</p>
           </div>
 
-          {/* Inputs unchanged, just remove Tailwind classes */}
+          <input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            style={{
+              width: '100%',
+              padding: '8px',
+              margin: '8px 0',
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              fontSize: '14px',
+              boxSizing: 'border-box'
+            }}
+          />
+
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            style={{
+              width: '100%',
+              padding: '8px',
+              margin: '8px 0',
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              fontSize: '14px',
+              boxSizing: 'border-box'
+            }}
+          />
+
+          <select
+            value={orderType}
+            onChange={e => setOrderType(e.target.value)}
+            style={{
+              width: '100%',
+              padding: '8px',
+              margin: '8px 0',
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              fontSize: '14px',
+              boxSizing: 'border-box',
+              backgroundColor: '#fff'
+            }}
+          >
+            <option value="pickup">Pickup</option>
+            <option value="delivery">Delivery</option>
+          </select>
+
+          <select
+            value={tipPercentage}
+            onChange={e => setTipPercentage(Number(e.target.value))}
+            style={{
+              width: '100%',
+              padding: '8px',
+              margin: '8px 0',
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              fontSize: '14px',
+              boxSizing: 'border-box',
+              backgroundColor: '#fff'
+            }}
+          >
+            <option value={0}>No Tip</option>
+            <option value={18}>18%</option>
+            <option value={20}>20%</option>
+            <option value={22}>22%</option>
+            <option value={-1}>Custom</option>
+          </select>
+
+          {tipPercentage === -1 && (
+            <input
+              type="number"
+              placeholder="Custom Tip Amount"
+              value={customTip}
+              onChange={e => setCustomTip(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '8px',
+                margin: '8px 0',
+                border: '1px solid #ccc',
+                borderRadius: '4px',
+                fontSize: '14px',
+                boxSizing: 'border-box'
+              }}
+            />
+          )}
+
           <button style={{ backgroundColor: '#28a745', color: '#fff', padding: '8px 16px', borderRadius: '4px', border: 'none', cursor: 'pointer', marginTop: '16px' }} onClick={handleCheckout} disabled={!name || !email || cart.length === 0}>
             Checkout
           </button>

@@ -1,10 +1,16 @@
 import OrderForm from "./Components/orderform";
-function Home() {
 
+function Home() {
     return (
-        <div className="home">
+        <div
+            style={{
+                paddingTop: "80px",   // or whatever your navbar height is
+                paddingLeft: "20px",
+                paddingRight: "20px",
+                paddingBottom: "20px"
+            }}
+        >
             <OrderForm />
-            
         </div>
     );
 }

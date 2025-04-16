@@ -12,15 +12,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../assets/transparent_logo.png'
 
 function Navbar_Local() {
-    const navbarRef = useRef(null);
-    useEffect(() => {
-      const tl = gsap.timeline();
-      tl.to(navbarRef.current, {
-        opacity: 1,
-        duration: 2,
-        delay: 1.5,
-      })
-    }, []);
+  const navbarRef = useRef(null);
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.to(navbarRef.current, {
+      opacity: 1,
+      duration: 2,
+      delay: 1.5,
+    })
+  }, []);
 
   const [buttonVisible, setButtonVisible] = useState(true);
   const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(true);
@@ -43,7 +43,7 @@ function Navbar_Local() {
   };
 
   return (
-    <Navbar fixed="top" expand="md" data-bs-theme="dark" className="bg-body-tertiary" id="navbar" ref={ navbarRef }>
+    <Navbar fixed="top" expand="md" data-bs-theme="dark" className="bg-body-tertiary" id="navbar" ref={navbarRef}>
       <Container>
         <Navbar.Brand href="#home" onClick={handleLogoClick}>
           <NavLink to='/'>
@@ -81,7 +81,7 @@ function Navbar_Local() {
         </Navbar.Collapse>
 
         {buttonVisible && isNavbarCollapsed && (
-          <NavLink to="/order" target="_blank" rel="noopener noreferrer">
+          <NavLink to="/order"  >
             <button className="btn navbar-button">Order Online</button>
           </NavLink>
         )}
