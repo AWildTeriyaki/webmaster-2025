@@ -55,3 +55,8 @@
         font-size: 28px;
     }
 }
+@media screen and (min-height: 1000px) {
+    .restaurant-intro {
+        height: 40vh;
+    }
+}
