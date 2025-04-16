@@ -29,7 +29,7 @@
     height: fit-content;
 
     background-color: #508D4E;
-    padding: 30px !important;
+    padding: 30px;
 }
 
 .footer-col {
@@ -114,5 +114,8 @@
 @media screen and (min-width: 2000px) {
     .block {
         font-size: 28px;
+    }
+    .footer-top {
+        padding: 100px;
     }
 }
