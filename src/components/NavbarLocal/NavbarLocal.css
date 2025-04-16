@@ -35,4 +35,8 @@
     #navbar {
         font-size: 28px;
     }
+    #navbar-logo {
+        height: 100px;
+        width: 250px;
+    }
 }

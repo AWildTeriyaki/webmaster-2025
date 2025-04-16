@@ -118,4 +118,7 @@
     .footer-top {
         padding: 100px;
     }
+    .footer-text {
+        font-size: 21px;
+    }
 }
