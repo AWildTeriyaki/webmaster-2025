@@ -32,3 +32,14 @@
     color: white;
     z-index: 2;
 }
+
+@media screen and (min-width: 2000px) {
+    .top-logo {
+        width: 300px;
+        height: 300px;
+    }
+
+    .top h1 {
+        font-size: 31px;
+    }
+}
