@@ -108,3 +108,16 @@
         font-size: 18px;
     }
 }
+
+@media screen and (min-width: 2000px) {
+    .text-side {
+        padding-right: 100px;
+    }
+    .text-side p {
+        font-size: 28px;
+    }
+    .gardener-text {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}

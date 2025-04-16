@@ -1,5 +1,5 @@
 .restaurant-intro {
-    height: 500px;
+    height: 25vh;
 
     background-color: #fbf8f8;
     
@@ -48,5 +48,10 @@
 @media screen and (min-width: 1000px) {
     .restaurant-intro-left p {
         font-size: 21px;
+    }
+}
+@media screen and (min-width: 2000px) {
+    .restaurant-intro-left p {
+        font-size: 28px;
     }
 }
