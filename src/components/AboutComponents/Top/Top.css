@@ -34,6 +34,10 @@
 }
 
 @media screen and (min-width: 2000px) {
+    .top {
+        gap: 80px;
+    }
+
     .top-logo {
         width: 300px;
         height: 300px;
