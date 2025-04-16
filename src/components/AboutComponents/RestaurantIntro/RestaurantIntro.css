@@ -1,0 +1,52 @@
+.restaurant-intro {
+    height: 500px;
+
+    background-color: #fbf8f8;
+    
+    display: flex;
+    flex-direction: row;
+}
+.restaurant-intro-left {
+    width: 100vw;
+    height: 100%;
+    background-color: #024958;
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.restaurant-intro-left p {
+    font-size: 14px;
+    font-family: 'Raleway';
+    color: white;
+}
+.restaurant-intro-right {
+    display: none;
+}
+.carousel-slide {
+    background-size: cover;
+}
+
+@media screen and (min-width: 500px) {
+    .restaurant-intro-left p {
+        font-size: 21px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .restaurant-intro-left {
+        width: 40vw;
+    }
+    .restaurant-intro-left p {
+        font-size: 18px;
+    }
+    .restaurant-intro-right {
+        display: block;
+        width: 60vw;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .restaurant-intro-left p {
+        font-size: 21px;
+    }
+}

@@ -25,3 +25,14 @@
 .nav {
     gap: 30px;
 }
+
+@media screen and (min-width: 1500px) {
+    #navbar {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 2000px) {
+    #navbar {
+        font-size: 21px;
+    }
+}

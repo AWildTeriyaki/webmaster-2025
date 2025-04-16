@@ -3,8 +3,6 @@ import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "react-multi-carousel/lib/styles.css";
 
 import Carousel from "react-multi-carousel";
-import { NavLink } from 'react-router-dom';
-
 
 function MenuPromotion() {
 
@@ -12,12 +10,12 @@ function MenuPromotion() {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
-      slidesToSlide: 3
+      slidesToSlide: 1
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
-      slidesToSlide: 2
+      slidesToSlide: 1
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -39,6 +37,7 @@ function MenuPromotion() {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
         className="react-carousel w-100 h-100"
+        id="menu-promotion-carousel"
       >
         <div className="carousel-slide w-100 h-100" id="item1"><img alt="" src="https://nikkivegan.com/wp-content/uploads/2021/07/img_5747.jpg"/></div>
         <div className="carousel-slide w-100 h-100" id="item2"><img alt="" src="https://www.walderwellness.com/wp-content/uploads/2022/11/Maple-Roasted-Delicata-Squash-Walder-Wellness-10.jpg"/></div>

@@ -9,7 +9,7 @@ function Body() {
                 <div className="col gallery-col" id="col1">
                     <img className="long-image" src="https://www.mydeliciousblog.com/wp-content/uploads/2017/01/Radish-Crostini-Full-View.jpg" alt="Radish Crostini" />
                     <img className="short-image" src="https://images.pexels.com/photos/8738014/pexels-photo-8738014.jpeg" alt="Spring Pea Soup" />
-                    <img className="long-image" />
+                    <img className="long-image" src="https://images.pexels.com/photos/7129455/pexels-photo-7129455.jpeg" alt="Falafel" />
                 </div>
                 <div className="col gallery-col" id="col2">
                     <img className="short-image" src="https://images.pexels.com/photos/1256875/pexels-photo-1256875.jpeg" alt="Spring Pesto Pasta" />
