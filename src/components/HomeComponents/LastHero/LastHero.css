@@ -110,3 +110,16 @@
         padding: 20px;
     }
 }
+
+@media screen and (min-width: 2000px) {
+    .hero {
+        gap: 30px;
+    }
+    .hero-logo {
+        height: 300px;
+        width: 300px;
+    }
+    .hero h1 {
+        font-size: 48px;
+    }
+}
