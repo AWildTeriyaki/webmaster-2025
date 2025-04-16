@@ -38,10 +38,10 @@ function MenuPromotion() {
         itemClass="carousel-item-padding-40-px"
         className="react-carousel w-100 h-100"
       >
-        <div className="carousel-slide w-100 h-100" id="item1"><img alt="" src="https://nikkivegan.com/wp-content/uploads/2021/07/img_5747.jpg"/></div>
-        <div className="carousel-slide w-100 h-100" id="item2"><img alt="" src="https://www.walderwellness.com/wp-content/uploads/2022/11/Maple-Roasted-Delicata-Squash-Walder-Wellness-10.jpg"/></div>
-        <div className="carousel-slide w-100 h-100" id="item3"><img alt="" src="https://www.pro-activ.com/en-gb/-/media/Project/Upfield/Brands/ProActiv/ProActiv-Live-UK/Assets/Recipes/d9768ba2-37a7-47d2-a4ff-4b631a206f59.jpg?rev=a55b4e01049f4093bc4094660d629d39"/></div>
-        <div className="carousel-slide w-100 h-100" id="item4"><img alt="" src="https://cdn.loveandlemons.com/wp-content/uploads/2023/01/mushroom-risotto.jpg"/></div>
+        <div className="carousel-slide w-100 h-100" id="item1"><img alt="" src="https://images.pexels.com/photos/8738014/pexels-photo-8738014.jpeg"/></div>
+        <div className="carousel-slide w-100 h-100" id="item2"><img alt="" src="https://images.pexels.com/photos/3185509/pexels-photo-3185509.png"/></div>
+        <div className="carousel-slide w-100 h-100" id="item3"><img alt="" src="https://images.pexels.com/photos/5950441/pexels-photo-5950441.jpeg"/></div>
+        <div className="carousel-slide w-100 h-100" id="item4"><img alt="" src="https://images.pexels.com/photos/7129455/pexels-photo-7129455.jpeg"/></div>
       </Carousel>
     </div>
   );
