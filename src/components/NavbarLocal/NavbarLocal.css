@@ -42,5 +42,8 @@
     .navbar-button {
         height: 80px;
         width: 200px;
+        margin-left: 50px;
+
+        font-size: 28px;
     }
 }
