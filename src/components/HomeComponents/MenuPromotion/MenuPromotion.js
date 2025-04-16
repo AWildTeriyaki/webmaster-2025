@@ -31,13 +31,12 @@ function MenuPromotion() {
         autoPlay={true}
         swipeable={true}
         draggable={true}
-        showDots={true}
+        showDots={false}
         infinite={true}
         partialVisible={false}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
         className="react-carousel w-100 h-100"
-        id="menu-promotion-carousel"
       >
         <div className="carousel-slide w-100 h-100" id="item1"><img alt="" src="https://nikkivegan.com/wp-content/uploads/2021/07/img_5747.jpg"/></div>
         <div className="carousel-slide w-100 h-100" id="item2"><img alt="" src="https://www.walderwellness.com/wp-content/uploads/2022/11/Maple-Roasted-Delicata-Squash-Walder-Wellness-10.jpg"/></div>
