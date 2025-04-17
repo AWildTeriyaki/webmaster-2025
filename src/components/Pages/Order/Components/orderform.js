@@ -76,7 +76,7 @@ const OrderForm = () => {
                 {menuItems.filter((item) => item.category === category).map((item) => (
                   <div key={item.id} style={{ border: '1px solid #ddd', padding: '8px', borderRadius: '8px' }}>
                     <h4 style={{ marginTop: '8px', fontWeight: '500' }}>{item.name}</h4>
-                    <p style={{ fontSize: '14px' }}>{item.description}</p>
+                    <p style={{ fontSize: '14px', fontFamily: 'Raleway' }}>{item.description}</p>
                     <p style={{ fontWeight: '600' }}>${item.price}</p>
                     <button style={{ marginTop: '8px', backgroundColor: '#F6E966', color: "black", padding: '4px 8px', borderRadius: '4px', border: 'none', cursor: 'pointer' }} onClick={() => addToCart(item)}>
                       Add to Cart
