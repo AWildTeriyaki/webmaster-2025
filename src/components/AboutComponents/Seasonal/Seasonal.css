@@ -1,0 +1,30 @@
+.seasonal {
+    height: 500px;
+    background-color: #879e86;
+
+    display: flex;
+    flex-direction: row;
+}
+.seasonal-left {
+    width: 60vw;
+    background-image: url('../../../assets/handshake.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.seasonal-right {
+    width: 40vw;
+    background-color: #024958;
+
+    padding: 40px;
+    font-family: 'Raleway';
+    color: white;
+}
+@media screen and (max-width: 500px) {
+    .seasonal-right {
+        padding: 20px;
+        width: 100vw;
+    }
+    .seasonal-left {
+        display: none;
+    }
+}
